@@ -1,0 +1,14 @@
+@use './colors' as *;
+@use './breakpoints' as *;
+
+@mixin max-breakpoint($size) {
+  @media (max-width: #{breakpoint($size)}) {
+    @content;
+  }
+}
+
+@mixin min-breakpoint($size) {
+  @media (min-width: #{breakpoint($size)}) {
+    @content;
+  }
+}

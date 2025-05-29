@@ -1,0 +1,33 @@
+.header {
+  @extend %flex-center;
+  @extend %flex-between;
+
+  color: $color_black;
+  background-color: $color_white;
+
+  height: 56px;
+  padding: 32px 64px;
+
+  @include max-breakpoint(laptop) {
+    padding: 25px 13px;
+  }
+
+  @include max-breakpoint(mobile) {
+    padding: 24px 16px;
+  }
+
+  &__rightSection {
+    @extend %flex-center;
+    gap: 20px;
+
+    @include max-breakpoint(mobile) {
+      gap: 5px;
+    }
+  }
+
+  &__logo {
+    width: 120px;
+    height: 90px;
+    cursor: pointer;
+  }
+}

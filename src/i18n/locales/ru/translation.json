@@ -1,0 +1,25 @@
+{
+  "NotFoundPage": "Страница не найдена 404",
+  "AboutPage": "О нас",
+  "AccauntPage": "",
+  "ActionsPage": "Действия",
+  "ContactPage": "Контакты",
+  "DashboardPage": "Панель Управления",
+  "HistoryPage": "История",
+  "HomePage": "Главная Страница",
+  "LoginPage": "Авторизация",
+  "ProductsPage": "Товары",
+
+  "Home": "Главная",
+  "About": "О нас",
+  "Account": "Аккаунт",
+  "Actions": "Действия",
+  "Contact": "Контакты",
+  "Dashboard": "Панель управления",
+  "History": "История",
+  "Login": "Вход",
+  "NotFound": "Не найдено",
+  "Products": "Товары",
+
+  "ForgetPassword": "Забыли пароль ?"
+}

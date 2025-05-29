@@ -1,0 +1,25 @@
+{
+  "NotFoundPage": "Page is notFound 404",
+  "AboutPage": "About",
+  "AccauntPage": "",
+  "ActionsPage": "Actions",
+  "ContactPage": "Contacts",
+  "DashboardPage": "Dashboard",
+  "HistoryPage": "History",
+  "HomePage": "Home",
+  "LoginPage": "Login",
+  "ProductsPage": "Products",
+
+  "Home": "Home",
+  "About": "About",
+  "Accoiunt": "Account",
+  "Actions": "Actions",
+  "Contact": "Contact",
+  "Dashboard": "Dashboard",
+  "History": "History",
+  "Login": "Login",
+  "NotFound": "Not Found",
+  "Products": "Products",
+
+  "ForgetPassword": "Forget Password ?"
+}

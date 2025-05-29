@@ -1,0 +1,76 @@
+.container {
+  @extend %flex-center;
+
+  height: 100vh;
+
+  &__login-block {
+    background-color: $color_white;
+
+    width: 100%;
+    padding: 32px;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 16px;
+
+    &__title {
+      color: $color_black;
+
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 22px;
+    }
+  }
+
+  &__submit {
+    color: $color_white;
+    background-color: $color_info;
+
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 10px 16px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $color_info;
+    }
+  }
+
+  &__error-message {
+    color: $color_error;
+
+    font-size: 15px;
+  }
+
+  &__forget-link {
+    color: $color_info;
+
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 16px;
+    text-decoration: underline;
+
+    &:hover {
+      color: $color_info;
+    }
+  }
+
+  &__input {
+    border: 1px solid $color_blur;
+
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    transition: border-color 0.3s;
+
+    &:focus {
+      border-color: $color_info;
+
+      outline: none;
+    }
+  }
+}

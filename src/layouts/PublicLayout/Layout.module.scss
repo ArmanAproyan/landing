@@ -1,0 +1,12 @@
+.layout {
+  @extend %flex-column;
+
+  background-color: $color_light-gray;
+
+  min-height: 100vh;
+
+  &__main {
+    flex: 1 0 auto;
+    padding: 20px;
+  }
+}

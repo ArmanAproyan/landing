@@ -1,0 +1,44 @@
+.notFound {
+  @extend %flex-center;
+
+  background-color: $color_white;
+  color: $color_black;
+
+  height: 100vh;
+  text-align: center;
+
+  &__content {
+    padding: 16px;
+    max-width: 600px;
+
+    &__title {
+      color: $color_error;
+
+      font-size: 100px;
+      font-weight: bold;
+      margin-bottom: 16px;
+    }
+
+    &__message {
+      font-size: 22px;
+      margin-bottom: 24px;
+    }
+
+    &__button {
+      @extend %flex-center;
+
+      color: $color_white;
+      background: $color_warning;
+
+      height: 30px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.5s;
+      border-radius: 10px;
+
+      &:hover {
+        transform: scale(1.01);
+      }
+    }
+  }
+}
