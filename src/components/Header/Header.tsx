@@ -1,24 +1,24 @@
-import { useNavigate } from 'react-router-dom'
-import { GucciLogo } from '@/assets/icons'
-import { Burger } from 'components'
-import { ROUTE } from '@/routes'
+import { useState } from 'react'
 import { useClassNames } from '@/hooks'
+import { Logo } from '@/assets/icons'
+import { NavBar } from '../NavBar'
+import { Burger } from '../Burger'
 
 import styles from './Header.module.scss'
 
 export const Header = () => {
-  const navigate = useNavigate()
-
   const { cn } = useClassNames('header', styles)
+  const [isOpenBurger, setIsOpenBurger] = useState(false)
+
+  const toggleMenu = () => setIsOpenBurger((prev) => !prev)
 
   return (
     <header className={cn()}>
       <div className={cn('__logo')}>
-        <GucciLogo onClick={() => navigate(ROUTE.HOME)} className={cn('__logo')} />
+        <Logo className={cn('__logo__item')} />
       </div>
-      <div className={cn('__rightSection')}>
-        <Burger />
-      </div>
+      <Burger isOpen={isOpenBurger} toggleMenu={toggleMenu} />
+      <NavBar isOpen={isOpenBurger} toggleMenu={toggleMenu} />
     </header>
   )
 }

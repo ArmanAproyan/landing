@@ -1,33 +1,21 @@
-import { Fragment, useState } from 'react'
-import { useClassNames, useLockBodyScroll } from '@/hooks'
-import { BURGER_LINE_COUNT } from './Burger.constant'
+import { useClassNames } from '@/hooks'
+import classNames from 'classnames'
+import { TBurgerProps, LINE_ITEMS } from './Burger.types'
 
 import styles from './Burger.module.scss'
-import { OverLay } from '../Overlay'
 
-export const Burger = () => {
-  const [isOpen, setIsOpen] = useState(false)
-  const toggleMenu = () => setIsOpen((open) => !open)
+export const Burger = ({ isOpen, toggleMenu }: TBurgerProps) => {
+  const { cn } = useClassNames('burger', styles)
 
-  const { cn } = useClassNames('navbar', styles)
-
-  useLockBodyScroll(isOpen)
+  const drawBurgerItems = Array(LINE_ITEMS)
+    .fill(null)
+    .map((_, id) => {
+      return <span key={id} className={cn('__items')}></span>
+    })
 
   return (
-    <Fragment>
-      <nav className={cn()}>
-        <div className={cn('__burger')} onClick={toggleMenu}>
-          {Array(BURGER_LINE_COUNT)
-            .fill(null)
-            .map((_, i) => {
-              return <div key={i} className={cn('__burger__line')} />
-            })}
-        </div>
-        <span className={cn('__burger__text')} onClick={toggleMenu}>
-          Menu
-        </span>
-      </nav>
-      <OverLay isOpen={isOpen} onClose={toggleMenu} />
-    </Fragment>
+    <div className={classNames(cn(), { [cn('--open')]: isOpen })} onClick={toggleMenu}>
+      {drawBurgerItems}
+    </div>
   )
 }

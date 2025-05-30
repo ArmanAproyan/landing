@@ -1,12 +1,20 @@
 .layout {
   @extend %flex-column;
 
-  background-color: $color_light-gray;
+  background-color: $color_background;
 
+  margin: 0 auto;
   min-height: 100vh;
 
   &__main {
+    background-color: $color_background;
+
     flex: 1 0 auto;
-    padding: 20px;
+    margin: 0 auto;
+    padding: 0 50px;
+
+    @include max-breakpoint(tablet) {
+      padding: 0 20px;
+    }
   }
 }

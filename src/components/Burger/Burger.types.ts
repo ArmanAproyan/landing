@@ -1,4 +1,6 @@
-export type TBurger = {
+export type TBurgerProps = {
   isOpen: boolean
-  closeModal: () => void
+  toggleMenu: () => void
 }
+
+export const LINE_ITEMS = 3

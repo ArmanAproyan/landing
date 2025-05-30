@@ -1,8 +1,8 @@
-import { Footer, Header, PageHelmet } from 'components'
 import { useClassNames } from '@/hooks'
+import { PublicLayoutProps } from './PublicLayout.types'
+import { Footer, Header, PageHelmet } from '@/components'
 
 import styles from './Layout.module.scss'
-import { PublicLayoutProps } from './PublicLayout.types'
 
 export const PublicLayout = ({
   title,
