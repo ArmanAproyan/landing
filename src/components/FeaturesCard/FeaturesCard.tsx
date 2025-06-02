@@ -7,6 +7,8 @@ import { Arrow, User1, User2, User3, User4 } from '@/assets'
 export const FeatureCards = () => {
   const { cn } = useClassNames('feature__cards', styles)
 
+  console.log('test')
+
   return (
     <div className={cn()}>
       <div className={cn('__speakers')}>
