@@ -3,9 +3,7 @@
   height: 18px;
   display: none;
   cursor: pointer;
-  flex-direction: column;
   transition: all 0.3s ease;
-  justify-content: space-between;
 
   &__items {
     background-color: $color_white;
@@ -30,5 +28,7 @@
 
   @include max-breakpoint(tablet) {
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }

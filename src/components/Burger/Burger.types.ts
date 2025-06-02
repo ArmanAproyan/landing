@@ -3,4 +3,4 @@ export type TBurgerProps = {
   toggleMenu: () => void
 }
 
-export const LINE_ITEMS = 3
+export const LINE_ITEMS_COUNT = 3

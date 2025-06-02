@@ -19,7 +19,8 @@
       gap: 30px;
       width: 50%;
       height: 100vh;
-      @extend %flex-column;
+      display: flex;
+      flex-direction: column;
       justify-content: flex-start;
     }
   }
