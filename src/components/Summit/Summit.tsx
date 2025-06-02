@@ -1,6 +1,6 @@
 import { useClassNames } from '@/hooks'
 import { SUMMIT_DATA } from './Summit.const'
-import { Button } from '../Button'
+import { Button } from '../CustomButton'
 
 import styles from './Summit.module.scss'
 
@@ -14,8 +14,8 @@ export const Summit = () => {
         <span>{location}</span>
       </div>
       <div className={cn('__welcome__text')}>
-        <h1 className={cn('__welcome__text__h1')}>{title}</h1>
-        <p className={cn('__welcome__text__p')}>{description}</p>
+        <h1 className={cn('__welcome__text__title')}>{title}</h1>
+        <p className={cn('__welcome__text__description')}>{description}</p>
       </div>
       <div className={cn('__button__block')}>
         <Button>Early bird tickets</Button>

@@ -1,5 +1,5 @@
 export type TNavBar = {
-  id: number
+  id: string
   title: string
   isActive: boolean
 }

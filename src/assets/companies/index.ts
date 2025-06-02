@@ -1,0 +1,5 @@
+export { ReactComponent as Amazon } from './amazon.svg'
+export { ReactComponent as Dribbble } from './dribbble.svg'
+export { ReactComponent as Gumroad } from './gumroad.svg'
+export { ReactComponent as Hubspot } from './hubspot.svg'
+export { ReactComponent as Notion } from './notion.svg'
