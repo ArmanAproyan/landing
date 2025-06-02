@@ -1,44 +1,18 @@
 .notFound {
   @extend %flex-center;
+  @extend %flex-column;
 
-  background-color: $color_white;
-  color: $color_black;
-
+  gap: 25px;
+  width: 100%;
   height: 100vh;
-  text-align: center;
 
-  &__content {
-    padding: 16px;
-    max-width: 600px;
+  &__home {
+    @extend %flex-center;
 
-    &__title {
-      color: $color_error;
-
-      font-size: 100px;
-      font-weight: bold;
-      margin-bottom: 16px;
-    }
-
-    &__message {
-      font-size: 22px;
-      margin-bottom: 24px;
-    }
-
-    &__button {
-      @extend %flex-center;
-
-      color: $color_white;
-      background: $color_warning;
-
-      height: 30px;
-      font-size: 18px;
-      cursor: pointer;
-      transition: 0.5s;
-      border-radius: 10px;
-
-      &:hover {
-        transform: scale(1.01);
-      }
-    }
+    background-color: $color_white;
+    border-radius: $border_radius_main;
+    color: $color_black;
+    padding: 5px 25px;
+    cursor: pointer;
   }
 }

@@ -1,5 +1,3 @@
-export * from './authenticate'
-export * from './login'
-export * from './outSideClick'
 export * from './lockBodyScroll'
 export * from './classNames'
+export * from './outSideClick'
