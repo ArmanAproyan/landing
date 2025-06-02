@@ -1,10 +1,11 @@
 import { TNavBar } from './NavBar.types'
+import { v4 as uuid } from 'uuid'
 
 export const NavBarItems: TNavBar[] = [
-  { id: 1, title: 'Home', isActive: true },
-  { id: 2, title: 'Schedule', isActive: false },
-  { id: 3, title: 'Speakers', isActive: false },
-  { id: 4, title: 'Tickets', isActive: false },
-  { id: 5, title: 'Venue', isActive: false },
-  { id: 6, title: 'Sponsors', isActive: false }
+  { id: uuid(), title: 'Home', isActive: true },
+  { id: uuid(), title: 'Schedule', isActive: false },
+  { id: uuid(), title: 'Speakers', isActive: false },
+  { id: uuid(), title: 'Tickets', isActive: false },
+  { id: uuid(), title: 'Venue', isActive: false },
+  { id: uuid(), title: 'Sponsors', isActive: false }
 ]

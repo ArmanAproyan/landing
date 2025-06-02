@@ -8,10 +8,10 @@ import styles from './Navbar.module.scss'
 
 export const NavBar = ({ isOpen, toggleMenu }: TNavBarProps) => {
   const { cn } = useClassNames('ul', styles)
-  const outSideRef = useOutsideClick<HTMLUListElement>(toggleMenu, isOpen)
+  const listRef = useOutsideClick<HTMLUListElement>(toggleMenu, isOpen)
 
   const drawUlitems = (
-    <ul ref={outSideRef} className={classNames(cn(), { [cn('--open')]: isOpen })}>
+    <ul ref={listRef} className={classNames(cn(), { [cn('--open')]: isOpen })}>
       {NavBarItems.map(({ id, title, isActive }) => (
         <li
           key={id}
