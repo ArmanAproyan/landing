@@ -1,4 +1,4 @@
-import { Summit } from '@/components'
+import { Summit, Companies, FeatureCards } from '@/components'
 import { useClassNames } from '@/hooks'
 
 import styles from './Home.module.scss'
@@ -8,6 +8,8 @@ export const Home = () => {
   return (
     <div className={cn()}>
       <Summit />
+      <Companies />
+      <FeatureCards />
     </div>
   )
 }
