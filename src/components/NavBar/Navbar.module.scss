@@ -1,4 +1,4 @@
-.ul {
+.list {
   @extend %flex-center;
   list-style: none;
 
@@ -24,7 +24,7 @@
     }
   }
 
-  &__li {
+  &__item {
     font-size: 25px;
     cursor: pointer;
     font-weight: 500;

@@ -1,0 +1,9 @@
+@use './colors' as *;
+@use './vars' as *;
+
+%container_main {
+  background-color: $color_mainContainer;
+  border-radius: $border_radius_main;
+  max-width: 1240px;
+  margin: 0 auto;
+}

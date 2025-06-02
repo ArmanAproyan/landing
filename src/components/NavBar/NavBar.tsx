@@ -7,7 +7,7 @@ import { Overlay } from 'components'
 import styles from './Navbar.module.scss'
 
 export const NavBar = ({ isOpen, toggleMenu }: TNavBarProps) => {
-  const { cn } = useClassNames('ul', styles)
+  const { cn } = useClassNames('list', styles)
   const listRef = useOutsideClick<HTMLUListElement>(toggleMenu, isOpen)
 
   const drawUlitems = (
@@ -15,8 +15,8 @@ export const NavBar = ({ isOpen, toggleMenu }: TNavBarProps) => {
       {NavBarItems.map(({ id, title, isActive }) => (
         <li
           key={id}
-          className={classNames(cn('__li'), {
-            [cn('__li__active')]: isActive
+          className={classNames(cn('__item'), {
+            [cn('__item__active')]: isActive
           })}
         >
           {title}
