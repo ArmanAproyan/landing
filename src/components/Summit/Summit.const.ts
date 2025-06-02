@@ -1,6 +1,6 @@
-import { TSumit } from './Summit.type'
+import { TSummit } from './Summit.type'
 
-export const SUMMIT_DATA: TSumit = {
+export const SUMMIT_DATA: TSummit = {
   day: 'OCTOBER 15-17, 2052',
   location: 'Horizon Convention Center, TechCity, Utopolis',
   title: 'NEXT-GEN AI SUMMIT',

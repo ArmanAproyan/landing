@@ -4,12 +4,17 @@ import { useClassNames } from '@/hooks'
 
 import styles from './CustomButton.module.scss'
 
-export const Button = ({ onClick, children }: TButtonProps) => {
+export const CustomButton = ({
+  isDisabled,
+  onClick,
+  children,
+  IconComponent = ArrowTopRightIcon
+}: TButtonProps) => {
   const { cn } = useClassNames('button', styles)
   return (
-    <button onClick={onClick} className={cn()}>
+    <button onClick={isDisabled ? undefined : onClick} className={cn()}>
       {children}
-      <ArrowTopRightIcon className={cn('__icon')} />
+      {<IconComponent className={cn('__icon')} />}
     </button>
   )
 }

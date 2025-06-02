@@ -1,6 +1,8 @@
-export type TSumit = {
-  day: string
-  location: string
-  title: string
-  description: string
+import { NullableString } from '@/types/NullableString'
+
+export type TSummit = {
+  day: NullableString
+  location: NullableString
+  title: NullableString
+  description: NullableString
 }
