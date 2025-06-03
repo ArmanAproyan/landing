@@ -16,7 +16,7 @@ export const Card_List: Record<'technologies' | 'networking' | 'speakers', TCard
       'Hear from global AI leaders, researchers, and entrepreneurs who are defining the future of artificial intelligence'
   },
   networking: {
-    title: 'Networking',
+    title: 'Networking Opportunities',
     description:
       'Explore advanced machine learning, natural language processing, AI-driven automation,and emerging cybersecurity applications.'
   },
