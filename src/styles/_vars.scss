@@ -44,8 +44,7 @@ $border_radius_main: 50px;
 
 // containers
 %container_main {
-  background-color: $color_mainContainer;
-  border-radius: $border_radius_main;
   max-width: 1240px;
+  width: 100%;
   margin: 0 auto;
 }

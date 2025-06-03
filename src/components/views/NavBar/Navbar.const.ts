@@ -6,5 +6,5 @@ export const NavBarItems: TNavBar<string | number>[] = [
   { id: 3, title: MenuTitles.SPEAKERS, isActive: false },
   { id: 4, title: MenuTitles.TICKETS, isActive: false },
   { id: 5, title: MenuTitles.VENUE, isActive: false },
-  { id: 5, title: MenuTitles.SPONSORS, isActive: false }
+  { id: 6, title: MenuTitles.SPONSORS, isActive: false }
 ]

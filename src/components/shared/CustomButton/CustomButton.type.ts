@@ -3,4 +3,5 @@ export type TButtonProps = {
   onClick?: () => void
   children: React.ReactNode
   IconComponent?: React.FC<React.SVGProps<SVGSVGElement>>
+  className?: string
 }

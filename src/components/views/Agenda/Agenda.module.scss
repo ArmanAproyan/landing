@@ -1,0 +1,162 @@
+.agenda {
+  &__header {
+    @extend %flex-center;
+    @extend %flex-between;
+
+    width: 100%;
+    padding: 30px;
+    margin: 150px 0 90px;
+
+    @include max-breakpoint(tablet) {
+      gap: 25px;
+      flex-direction: column;
+    }
+
+    &__title {
+      font-size: 100px;
+      font-weight: 700;
+
+      @include max-breakpoint(laptop) {
+        font-size: 60px;
+      }
+      @include max-breakpoint(mobile) {
+        font-size: 40px;
+      }
+    }
+
+    &__date {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 30px;
+
+      @include max-breakpoint(laptop) {
+        font-size: 25px;
+        text-align: center;
+      }
+    }
+  }
+
+  &__container {
+    @extend %flex-column;
+    @extend %container_main;
+    @extend %container_main;
+
+    background-color: $color_mainContainer;
+    border-radius: $border_radius_main;
+
+    &__information {
+      @extend %flex-column;
+
+      gap: 150px;
+      padding: 150px 90px 0px 90px;
+
+      @include max-breakpoint(desktop) {
+        padding: 50px 0px 0px 40px;
+      }
+
+      @include max-breakpoint(laptop) {
+        gap: 70px;
+      }
+
+      @include max-breakpoint(mobile) {
+        padding: 0px;
+      }
+
+      &__block {
+        @extend %flex-between;
+
+        @include max-breakpoint(mobile) {
+          gap: 20px;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+      }
+
+      &__dayAndTime {
+        @extend %flex-column;
+
+        gap: 15px;
+
+        @include max-breakpoint(mobile) {
+          padding-top: 20px;
+        }
+
+        &__day,
+        &__time {
+          font-size: 40px;
+          font-weight: 700;
+
+          @include max-breakpoint(desktop) {
+            font-size: 25px;
+          }
+        }
+      }
+
+      &__titleAndDescription {
+        @extend %flex-column;
+
+        gap: 30px;
+        max-width: 600px;
+        padding-right: 20px;
+
+        @include max-breakpoint(laptop) {
+          max-width: 400px;
+        }
+
+        @include max-breakpoint(tablet) {
+          max-width: 250px;
+        }
+
+        @include max-breakpoint(mobile) {
+          padding: 0;
+          align-items: center;
+          justify-content: center;
+        }
+
+        &__title {
+          font-size: 40px;
+          font-weight: 700;
+
+          @include max-breakpoint(desktop) {
+            font-size: 25px;
+          }
+        }
+
+        &__description {
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 30px;
+
+          @include max-breakpoint(desktop) {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+
+    &__footer {
+      @extend %flex-center;
+
+      height: 300px;
+      position: relative;
+      padding-right: 100px;
+      justify-content: end;
+      background-position: 0% 60%;
+      background-repeat: no-repeat;
+      background-image: url('../../../assets/icons/uiDecore_2.svg');
+      @include max-breakpoint(mobile) {
+        padding-right: 0;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &__button {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}

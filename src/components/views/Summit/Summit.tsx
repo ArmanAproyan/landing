@@ -1,12 +1,13 @@
 import { useClassNames } from '@/hooks'
 import { SUMMIT_DATA } from './Summit.const'
-import { CustomButton } from '../CustomButton'
+import { CustomButton } from '../../shared/CustomButton'
 
 import styles from './Summit.module.scss'
 
 export const Summit = () => {
   const { cn } = useClassNames('container', styles)
-  const { day, location, title, description } = SUMMIT_DATA
+  const { day, location, title, description, actionLabel } = SUMMIT_DATA
+
   return (
     <div className={cn()}>
       <div className={cn('__dayLocation')}>
@@ -18,7 +19,7 @@ export const Summit = () => {
         <p className={cn('__welcome__text__description')}>{description}</p>
       </div>
       <div className={cn('__button__block')}>
-        <CustomButton>Early bird tickets</CustomButton>
+        <CustomButton>{actionLabel}</CustomButton>
       </div>
     </div>
   )

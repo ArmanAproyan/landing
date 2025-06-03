@@ -1,10 +1,11 @@
 .companies {
+  @extend %container_main;
   @extend %flex-center;
 
   gap: 127px;
   height: auto;
-  padding: 100px 0;
   flex-wrap: wrap;
+  padding: 100px 0;
   max-width: 1440px;
 
   @include max-breakpoint(laptop) {

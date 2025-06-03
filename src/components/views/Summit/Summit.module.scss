@@ -1,6 +1,8 @@
 .container {
   @extend %container_main;
+
   background-color: $color_mainContainer;
+  border-radius: $border_radius_main;
 
   width: 100%;
   margin: 0 auto;
@@ -9,7 +11,7 @@
   background-size: 35%;
   background-position: 93% 89%;
   background-repeat: no-repeat;
-  background-image: url('../../assets/icons/uiDecor_1.svg');
+  background-image: url('../../../assets/icons/uiDecor_1.svg');
 
   @include max-breakpoint(desktop) {
     padding: 64px 48px;

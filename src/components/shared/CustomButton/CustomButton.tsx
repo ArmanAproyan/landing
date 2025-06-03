@@ -8,13 +8,17 @@ export const CustomButton = ({
   isDisabled,
   onClick,
   children,
+  className,
   IconComponent = ArrowTopRightIcon
 }: TButtonProps) => {
   const { cn } = useClassNames('button', styles)
   return (
-    <button onClick={isDisabled ? undefined : onClick} className={cn()}>
+    <button
+      onClick={isDisabled ? undefined : onClick}
+      className={`${cn()} ${className ?? ''}`.trim()}
+    >
       {children}
-      {<IconComponent className={cn('__icon')} />}
+      <IconComponent className={cn('__icon')} />
     </button>
   )
 }

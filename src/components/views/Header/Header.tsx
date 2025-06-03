@@ -1,14 +1,16 @@
 import { useState } from 'react'
-import { useClassNames } from '@/hooks'
+import { useClassNames, useLockBodyScroll } from '@/hooks'
 import { Logo } from '@/assets/icons'
 import { NavBar } from '../NavBar'
-import { Burger } from '../Burger'
+import { Burger } from '@/components/shared/Burger'
 
 import styles from './Header.module.scss'
 
 export const Header = () => {
   const { cn } = useClassNames('header', styles)
   const [isOpenBurger, setIsOpenBurger] = useState(false)
+
+  useLockBodyScroll(isOpenBurger)
 
   const toggleMenu = () => setIsOpenBurger((prev) => !prev)
 

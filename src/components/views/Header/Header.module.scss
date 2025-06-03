@@ -1,12 +1,13 @@
 .header {
   @extend %flex-center;
   @extend %flex-between;
+  @extend %container_main;
 
   background-color: $color_background;
 
-  gap: 170px;
+  gap: 90px;
   margin: 0 auto;
-  padding: 40px 100px;
+  padding: 40px 0px;
 
   @include max-breakpoint(desktop) {
     padding: 40px 50px;

@@ -2,7 +2,8 @@ import { NullableString } from '@/types/NullableString'
 
 export type TSummit = {
   day: NullableString
-  location: NullableString
   title: NullableString
+  location: NullableString
   description: NullableString
+  actionLabel: NullableString
 }
