@@ -1,7 +1,6 @@
 import { useClassNames } from '@/hooks'
-import { BsArrowRight } from 'react-icons/bs'
 import { USERS_LIST } from './FeaturesCard.const'
-import { Arrow } from '@/assets'
+import { Arrow, ArrowTopRightIcon } from '@/assets'
 import { Card_List } from './FeaturesCard.const'
 
 import styles from './FeaturesCard.module.scss'
@@ -35,7 +34,7 @@ export const FeatureCards = () => {
           </div>
           <button className={cn('__speakers__footer__moreBtn')}>
             And more
-            <BsArrowRight />
+            <ArrowTopRightIcon className={cn('__speakers__footer__moreBtn__item')} />
           </button>
         </div>
       </div>

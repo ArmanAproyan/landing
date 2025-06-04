@@ -1,12 +1,12 @@
 import { useClassNames } from '@/hooks'
-import { SUMMIT_DATA } from './Summit.const'
 import { CustomButton } from '../../shared/CustomButton'
+import { SummitProps } from './Summit.types'
 
 import styles from './Summit.module.scss'
 
-export const Summit = () => {
+export const Summit = ({ summitData }: SummitProps) => {
   const { cn } = useClassNames('container', styles)
-  const { day, location, title, description, actionLabel } = SUMMIT_DATA
+  const { day, location, title, description, actionLabel } = summitData
 
   return (
     <div className={cn()}>

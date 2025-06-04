@@ -1,5 +1,5 @@
 export type TAganda = {
-  id: number
+  id: number | string
   day: string
   time: string
   title: string

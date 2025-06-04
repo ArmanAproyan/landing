@@ -4,25 +4,25 @@ import { TCard, TUserList } from './FeaturesCard.types'
 
 export const USERS_LIST: TUserList[] = [
   { id: uuidv4(), User: User1 },
-  { id: uuidv4(), User: User2 },
+  { id: uuidv4(), User: User4 },
   { id: uuidv4(), User: User3 },
-  { id: uuidv4(), User: User4 }
+  { id: uuidv4(), User: User2 }
 ]
 
 export const Card_List: Record<'technologies' | 'networking' | 'speakers', TCard> = {
   technologies: {
     title: 'Technologies',
     description:
-      'Hear from global AI leaders, researchers, and entrepreneurs who are defining the future of artificial intelligence'
+      'Explore advanced machine learning, natural language processing, AI-driven automation, and emerging cybersecurity applications.'
   },
   networking: {
     title: 'Networking Opportunities',
     description:
-      'Explore advanced machine learning, natural language processing, AI-driven automation,and emerging cybersecurity applications.'
+      'Enjoy exclusive networking sessions, roundtables, and social events to foster collaboration and spark new partnerships.'
   },
   speakers: {
     title: 'Speakers',
     description:
-      'Enjoy exclusive networking sessions, roundtables, and social events to fostercollaboration and spark new partnerships.'
+      'Hear from global AI leaders, researchers, and entrepreneurs who are defining the future of artificial intelligence.'
   }
 }

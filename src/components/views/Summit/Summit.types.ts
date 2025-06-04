@@ -7,3 +7,7 @@ export type TSummit = {
   description: NullableString
   actionLabel: NullableString
 }
+
+export type SummitProps = {
+  summitData: TSummit
+}

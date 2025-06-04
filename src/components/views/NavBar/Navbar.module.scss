@@ -20,6 +20,7 @@
       width: 50%;
       height: 100vh;
       display: flex;
+      overflow-y: auto;
       flex-direction: column;
       justify-content: flex-start;
     }

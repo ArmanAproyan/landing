@@ -5,15 +5,16 @@ import { CustomButton } from '../../shared/CustomButton'
 import styles from './Agenda.module.scss'
 
 export const Agenda = () => {
+  const { date, location } = AGENDA_DATE
   const { cn } = useClassNames('agenda', styles)
   return (
     <div className={cn()}>
       <div className={cn('__header')}>
         <h3 className={cn('__header__title')}>AGENDA</h3>
         <p className={cn('__header__date')}>
-          {AGENDA_DATE.date}
+          {date}
           <br />
-          {AGENDA_DATE.location}
+          {location}
         </p>
       </div>
       <div className={cn('__container')}>
