@@ -1,6 +1,7 @@
-import { ArrowTopRightIcon } from '@/assets/icons'
-import { TButtonProps } from './CustomButton.type'
+import { ArrowTopRightIcon } from '@/assets/icons/shared'
+import { TCustomButtonProps } from './CustomButton.type'
 import { useClassNames } from '@/hooks'
+import classNames from 'classnames'
 
 import styles from './CustomButton.module.scss'
 
@@ -8,17 +9,21 @@ export const CustomButton = ({
   isDisabled,
   onClick,
   children,
-  className,
-  IconComponent = ArrowTopRightIcon
-}: TButtonProps) => {
+  className: classNameProp,
+  IconComponent = ArrowTopRightIcon,
+  showIcon = true,
+  variant = 'primary'
+}: TCustomButtonProps) => {
   const { cn } = useClassNames('button', styles)
+
   return (
     <button
+      disabled={isDisabled}
       onClick={isDisabled ? undefined : onClick}
-      className={`${cn()} ${className ?? ''}`.trim()}
+      className={classNames(cn(), cn(`--${variant}`), classNameProp)}
     >
       {children}
-      <IconComponent className={cn('__icon')} />
+      {IconComponent && showIcon && <IconComponent className={cn('__icon')} />}
     </button>
   )
 }

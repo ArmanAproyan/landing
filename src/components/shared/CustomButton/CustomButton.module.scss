@@ -1,15 +1,41 @@
 .button {
   @extend %button-main;
+  color: $color_white;
 
   border: none;
+
+  &--primary {
+    background: $button_color;
+  }
+
+  &--secondary {
+    @extend %word_breaking;
+
+    font-size: 25px;
+    background: none;
+    padding: 24px 24px;
+    border: 1px solid $color_white;
+
+    @include max-breakpoint(desktop) {
+      gap: 5px;
+      font-size: 15px;
+      white-space: wrap;
+      padding: 12px 12px;
+    }
+  }
 
   &__icon {
     width: 17px;
     height: 17px;
+    margin-left: 8px;
 
     @include max-breakpoint(tablet) {
-      width: 10px;
-      height: 10px;
+      transform: scale(0.6);
     }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
   }
 }

@@ -5,8 +5,8 @@
   gap: 127px;
   height: auto;
   flex-wrap: wrap;
-  max-width: 1440px;
-  padding: 100px 30px;
+  padding-top: 100px;
+  padding-bottom: 120px;
 
   @include max-breakpoint(laptop) {
     gap: 90px;
@@ -21,9 +21,11 @@
   @include max-breakpoint(mobile) {
     gap: 40px;
     padding: 40px 10px;
-    svg {
-      width: 80px;
-      height: auto;
+  }
+
+  &__item {
+    @include max-breakpoint(tablet) {
+      transform: scale(0.9);
     }
   }
 }

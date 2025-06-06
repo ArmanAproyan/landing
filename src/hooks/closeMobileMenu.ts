@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { breakpoints } from '@/constants'
 
 type TMobileMenuProps = {
   isOpen: boolean
@@ -6,9 +7,10 @@ type TMobileMenuProps = {
 }
 
 export const useCloseMobileMenu = ({ isOpen, closeMenu }: TMobileMenuProps) => {
+  const { tablet } = breakpoints
   useEffect(() => {
     const handleResize = () => {
-      if (isOpen && window.innerWidth > 800) {
+      if (isOpen && window.innerWidth > tablet) {
         closeMenu()
       }
     }
@@ -17,5 +19,5 @@ export const useCloseMobileMenu = ({ isOpen, closeMenu }: TMobileMenuProps) => {
 
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
-  }, [isOpen, closeMenu])
+  }, [isOpen, closeMenu, tablet])
 }

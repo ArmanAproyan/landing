@@ -1,4 +1,4 @@
-.container {
+.summit {
   @extend %container_main;
 
   background-color: $color_mainContainer;
@@ -6,12 +6,11 @@
 
   width: 100%;
   margin: 0 auto;
-  max-width: 1200px;
   padding: 90px 60px;
   background-size: 35%;
   background-position: 93% 89%;
   background-repeat: no-repeat;
-  background-image: url('../../../assets/icons/uiDecor_1.svg');
+  background-image: url('../../../assets/icons/shared/uiDecor_1.svg');
 
   @include max-breakpoint(desktop) {
     padding: 64px 48px;
@@ -30,12 +29,14 @@
   &__dayLocation {
     @extend %flex-between;
 
+    font-weight: $weight-bold;
+
     font-size: 22px;
-    font-weight: 700;
     line-height: 30px;
 
     @include max-breakpoint(laptop) {
       font-size: 15px;
+      line-height: 20px;
     }
 
     @include max-breakpoint(tablet) {
@@ -51,7 +52,6 @@
     @extend %flex-column;
 
     gap: 30px;
-    max-width: 100%;
     padding-top: 80px;
 
     @include max-breakpoint(tablet) {
@@ -59,30 +59,32 @@
     }
 
     &__title {
+      font-weight: $weight-bold;
+
       font-size: 100px;
-      font-weight: 700;
-      line-height: 100%;
+      line-height: 120px;
 
       @include max-breakpoint(laptop) {
-        font-size: 80px;
+        font-size: 60px;
+        line-height: 80px;
       }
 
       @include max-breakpoint(tablet) {
         font-size: 40px;
+        line-height: 50px;
       }
     }
 
     &__description {
-      max-width: 928px;
-      min-height: 60px;
+      font-weight: $weight-standart;
+
       font-size: 22px;
-      font-weight: 400;
-      max-width: 928px;
       line-height: 30px;
-      letter-spacing: 0%;
+      white-space: pre-line;
 
       @include max-breakpoint(laptop) {
         font-size: 12px;
+        line-height: 20px;
       }
     }
   }

@@ -1,19 +1,20 @@
 import { useClassNames, useOutsideClick } from '@/hooks'
 import { NavBarItems as initialItems } from './Navbar.const'
-import classNames from 'classnames'
 import { TNavBarProps } from './NavBar.types'
 import { Overlay } from 'components'
 import { useState } from 'react'
+import { TNavBar } from './NavBar.types'
 
+import classNames from 'classnames'
 import styles from './Navbar.module.scss'
 
 export const NavBar = ({ isOpen, toggleMenu }: TNavBarProps) => {
   const { cn } = useClassNames('list', styles)
   const listRef = useOutsideClick<HTMLUListElement>(toggleMenu, isOpen)
 
-  const [navItems, setNavItems] = useState(initialItems)
+  const [navItems, setNavItems] = useState<TNavBar<number>[]>(initialItems)
 
-  const handleSelect = (selectedId: string | number) => {
+  const handleSelect = (selectedId: number) => {
     setNavItems(navItems.map((item) => ({ ...item, isActive: item.id === selectedId })))
     if (isOpen) {
       toggleMenu()

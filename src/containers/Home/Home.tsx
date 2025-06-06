@@ -7,11 +7,12 @@ import styles from './Home.module.scss'
 
 export const Home = () => {
   const { cn } = useClassNames('home', styles)
+
+  const drawSummit = SUMMITS.map((summit, index) => <Summit key={index} summitData={summit} />)
+
   return (
     <div className={cn()}>
-      {SUMMITS.map((summit, index) => (
-        <Summit key={index} summitData={summit} />
-      ))}
+      {drawSummit}
       <Companies />
       <FeatureCards />
       <Agenda />

@@ -1,4 +1,4 @@
-import { NullableString } from '@/types/NullableString'
+import { NullableString } from '@/types'
 
 export type TSummit = {
   day: NullableString

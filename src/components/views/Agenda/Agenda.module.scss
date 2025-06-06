@@ -2,7 +2,6 @@
   &__header {
     @extend %flex-center;
     @extend %flex-between;
-
     width: 100%;
     padding-top: 30px;
     margin: 150px 0 90px;
@@ -10,30 +9,40 @@
     @include max-breakpoint(tablet) {
       gap: 25px;
       flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
 
     &__title {
+      font-weight: $weight-bold;
+      //TOOD create word breeaking variable and use everywhere
       font-size: 100px;
-      font-weight: 700;
 
       @include max-breakpoint(laptop) {
         font-size: 60px;
       }
+
       @include max-breakpoint(mobile) {
         font-size: 40px;
+        text-align: center;
       }
     }
 
     &__date {
+      font-weight: $weight-standart;
+
       font-size: 20px;
-      font-weight: 400;
       line-height: 30px;
       max-width: 295px;
       min-height: 60px;
 
       @include max-breakpoint(laptop) {
-        font-size: 25px;
         text-align: center;
+      }
+
+      @include max-breakpoint(mobile) {
+        font-size: 18px;
+        line-height: 26px;
       }
     }
   }
@@ -41,14 +50,11 @@
   &__container {
     @extend %flex-column;
     @extend %container_main;
-    @extend %container_main;
-
     background-color: $color_mainContainer;
     border-radius: $border_radius_main;
 
     &__information {
       @extend %flex-column;
-
       gap: 150px;
       padding: 150px 90px 0px 90px;
 
@@ -61,25 +67,30 @@
       }
 
       @include max-breakpoint(mobile) {
-        padding: 0px;
+        padding: 20px;
+        gap: 50px;
       }
 
       &__block {
         @extend %flex-between;
 
-        @include max-breakpoint(mobile) {
+        @include max-breakpoint(laptop) {
           gap: 20px;
+          text-align: center;
+          align-items: center;
           flex-direction: column;
           justify-content: center;
-          align-items: center;
-          text-align: center;
         }
       }
 
       &__dayAndTime {
         @extend %flex-column;
-
         gap: 15px;
+
+        @include max-breakpoint(tablet) {
+          justify-content: center;
+          align-items: center;
+        }
 
         @include max-breakpoint(mobile) {
           padding-top: 20px;
@@ -87,52 +98,70 @@
 
         &__day,
         &__time {
+          font-weight: $weight-bold;
+
           font-size: 40px;
-          font-weight: 700;
 
           @include max-breakpoint(desktop) {
             font-size: 25px;
+          }
+
+          @include max-breakpoint(tablet) {
+            line-height: 20px;
+            font-size: 20px;
           }
         }
       }
 
       &__titleAndDescription {
         @extend %flex-column;
-
         gap: 30px;
         max-width: 600px;
         padding-right: 20px;
 
         @include max-breakpoint(laptop) {
-          max-width: 400px;
+          transform: scale(0.9);
         }
 
         @include max-breakpoint(tablet) {
-          max-width: 250px;
+          transform: scale(0.8);
         }
 
         @include max-breakpoint(mobile) {
           padding: 0;
+          transform: scale(1);
           align-items: center;
           justify-content: center;
+          text-align: center;
         }
 
         &__title {
+          font-weight: $weight-bold;
+
           font-size: 40px;
-          font-weight: 700;
 
           @include max-breakpoint(desktop) {
             font-size: 25px;
           }
+
+          @include max-breakpoint(mobile) {
+            font-size: 20px;
+          }
         }
 
         &__description {
+          font-weight: $weight-standart;
+
           font-size: 20px;
-          font-weight: 400;
           line-height: 30px;
 
           @include max-breakpoint(desktop) {
             font-size: 15px;
+          }
+
+          @include max-breakpoint(mobile) {
+            font-size: 14px;
+            line-height: 24px;
           }
         }
       }
@@ -140,29 +169,34 @@
 
     &__footer {
       @extend %flex-center;
-
-      height: 300px;
       position: relative;
-      padding-right: 100px;
+      padding: 80px 100px 140px 0;
       justify-content: end;
       background-position: 0% 60%;
       background-repeat: no-repeat;
-      background-image: url('../../../assets/icons/uiDecore_2.svg');
-      @include max-breakpoint(mobile) {
-        padding-right: 0;
+      background-image: url('../../../assets/icons/shared/uiDecore_2.svg');
+
+      @include max-breakpoint(tablet) {
+        padding: 40px 20px 100px 20px;
         align-items: center;
+        background-size: 100px;
         justify-content: center;
+        background-position: center bottom;
       }
 
       &__button {
-        width: 52%;
-        display: flex;
-        justify-content: center;
+        @extend %flex-center;
+
+        &__item {
+          padding-left: 143px;
+          padding-right: 143px;
+
+          @include max-breakpoint(mobile) {
+            padding: 20px 40px;
+            width: 100%;
+          }
+        }
       }
     }
   }
-}
-
-.button {
-  width: 100%;
 }

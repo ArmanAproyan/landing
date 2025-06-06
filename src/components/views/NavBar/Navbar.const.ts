@@ -1,6 +1,6 @@
 import { MenuTitles, TNavBar } from './NavBar.types'
 
-export const NavBarItems: TNavBar<string | number>[] = [
+export const NavBarItems: TNavBar<number>[] = [
   { id: 1, title: MenuTitles.HOME, isActive: true },
   { id: 2, title: MenuTitles.SCHEDULE, isActive: false },
   { id: 3, title: MenuTitles.SPEAKERS, isActive: false },

@@ -1,12 +1,14 @@
 import { TSummit } from './Summit.types'
+import { SUMMIT_DATA } from '@/constants'
+import { formatDateYearMonthDay } from '@/utils'
 
 export const SUMMITS: TSummit[] = [
   {
-    day: 'OCTOBER 15-17, 2052',
-    location: 'Horizon Convention Center, TechCity, Utopolis',
+    day: formatDateYearMonthDay(SUMMIT_DATA.day.from, SUMMIT_DATA.day.to),
+    location: SUMMIT_DATA.place,
     title: 'NEXT-GEN AI SUMMIT',
     description:
-      'Explore the cutting-edge innovations shaping the future of artificial intelligence.Join global leaders and visionaries for two days of insights, discussions, and breakthroughs.',
+      'Explore the cutting-edge innovations shaping the future of artificial intelligence. Join global leaders and visionaries for two days of insights, discussions, and breakthroughs.',
     actionLabel: 'Early bird tickets'
   }
 ]

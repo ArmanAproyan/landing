@@ -1,13 +1,20 @@
 import { useClassNames } from '@/hooks'
-import { USERS_LIST } from './FeaturesCard.const'
-import { Arrow, ArrowTopRightIcon } from '@/assets'
+import { ArrowIcon } from '@/assets/icons'
 import { Card_List } from './FeaturesCard.const'
+import { USERS_LIST } from '@/components/constants'
 
 import styles from './FeaturesCard.module.scss'
+import { CustomButton, CardForFeature } from '@/components'
 
 export const FeatureCards = () => {
   const { cn } = useClassNames('feature__cards', styles)
   const { technologies, networking, speakers } = Card_List
+
+  const drawUserList = USERS_LIST.map(({ id, User }) => (
+    <div className={cn('__speakers__footer__avatars__item')} key={id}>
+      <User className={cn('__speakers__footer__avatars__item__svg')} />
+    </div>
+  ))
 
   return (
     <div className={cn()}>
@@ -17,41 +24,27 @@ export const FeatureCards = () => {
         </div>
         <div className={cn('__speakers__description')}>
           <div className={cn('__speakers__icon')}>
-            <Arrow width={74} height={74} />{' '}
+            <ArrowIcon />
           </div>
           <p className={cn('__speakers__description__title')}>{speakers.description}</p>
         </div>
 
         <div className={cn('__speakers__footer')}>
-          <div className={cn('__speakers__footer__avatars')}>
-            {USERS_LIST.map(({ id, User }) => {
-              return (
-                <div className={cn('__speakers__footer__avatars__item')} key={id}>
-                  <User className={cn('__speakers__footer__avatars__item__svg')} />
-                </div>
-              )
-            })}
-          </div>
-          <button className={cn('__speakers__footer__moreBtn')}>
-            And more
-            <ArrowTopRightIcon className={cn('__speakers__footer__moreBtn__item')} />
-          </button>
+          <div className={cn('__speakers__footer__avatars')}>{drawUserList}</div>
+          <CustomButton variant="secondary"> And more</CustomButton>
         </div>
       </div>
-
-      <div className={cn('__technologies')}>
-        <div className={cn('__technologies__wrapper')}>
-          <h3 className={cn('__technologies__wrapper__title')}>{technologies.title}</h3>
-          <p className={cn('__technologies__wrapper__description')}>{technologies.description}</p>
-        </div>
-      </div>
-
-      <div className={cn('__networking')}>
-        <div className={cn('__networking__wrapper')}>
-          <h3 className={cn('__networking__wrapper__title')}>{networking.title}</h3>
-          <p className={cn('__networking__wrapper__description')}>{networking.description}</p>
-        </div>
-      </div>
+      <CardForFeature
+        className={cn('__technologia')}
+        variant="primary"
+        title={technologies.title}
+        description={technologies.description}
+      />
+      <CardForFeature
+        variant="secondary"
+        title={networking.title}
+        description={networking.description}
+      />
     </div>
   )
 }

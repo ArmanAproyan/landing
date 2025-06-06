@@ -7,23 +7,19 @@
 %button-main {
   @extend %flex-center;
 
-  background: $button_color;
-  border-radius: 100px;
+  gap: 20px;
+  font-size: 25px;
+  cursor: pointer;
   padding: 22px 50px;
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  font-size: 25px;
-  width: fit-content;
-  gap: 20px;
+  border-radius: 100px;
   transition:
     background 0.3s ease,
     color 0.3s ease,
     transform 0.2s;
 
   @include max-breakpoint(tablet) {
-    font-size: 12px;
+    font-size: 15px;
     gap: 10px;
     padding: 14px 22px;
   }
@@ -37,9 +33,12 @@
   }
 }
 
-//radius
+// word breeaking
 
-$border_radius_main: 50px;
+%word_breaking {
+  word-break: break-word;
+  overflow-block: hidden;
+}
 
 // containers
 %container_main {
@@ -47,3 +46,13 @@ $border_radius_main: 50px;
   width: 100%;
   margin: 0 auto;
 }
+
+//radius
+
+$border_radius_main: 50px;
+
+// font-weights
+
+$weight-standart: 400;
+$weight_medium: 500;
+$weight-bold: 700;

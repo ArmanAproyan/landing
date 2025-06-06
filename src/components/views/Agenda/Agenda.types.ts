@@ -1,7 +1,10 @@
-export type TAganda = {
-  id: number | string
+import { NullableString } from '@/types'
+
+export type TAgenda = {
+  id: number
   day: string
-  time: string
+  startTime: NullableString
+  endTime: NullableString
   title: string
-  description: string
+  description: NullableString
 }

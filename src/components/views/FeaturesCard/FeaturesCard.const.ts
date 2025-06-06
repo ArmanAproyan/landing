@@ -1,13 +1,4 @@
-import { v4 as uuidv4 } from 'uuid'
-import { User1, User2, User3, User4 } from '@/assets'
-import { TCard, TUserList } from './FeaturesCard.types'
-
-export const USERS_LIST: TUserList[] = [
-  { id: uuidv4(), User: User1 },
-  { id: uuidv4(), User: User4 },
-  { id: uuidv4(), User: User3 },
-  { id: uuidv4(), User: User2 }
-]
+import { TCard } from './FeaturesCard.types'
 
 export const Card_List: Record<'technologies' | 'networking' | 'speakers', TCard> = {
   technologies: {
