@@ -3,7 +3,7 @@
   @extend %word_breaking;
 
   background-color: $color_black;
-  grid-template-columns: 43% 57%;
+  grid-template-columns: 43% 54%;
   gap: 20px;
   display: grid;
   grid-template-areas:
@@ -14,7 +14,7 @@
   @include max-breakpoint(desktop) {
     gap: 15px;
     padding: 30px 40px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 41% 53%;
   }
 
   @include max-breakpoint(tablet) {

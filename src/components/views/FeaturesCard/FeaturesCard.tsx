@@ -1,7 +1,7 @@
 import { useClassNames } from '@/hooks'
 import { ArrowIcon } from '@/assets/icons'
 import { Card_List } from './FeaturesCard.const'
-import { USERS_LIST } from '@/components/constants'
+import { USERS_LIST } from '@/constants'
 
 import styles from './FeaturesCard.module.scss'
 import { CustomButton, CardForFeature } from '@/components'

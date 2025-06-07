@@ -36,8 +36,8 @@
 // word breeaking
 
 %word_breaking {
+  overflow-wrap: break-word;
   word-break: break-word;
-  overflow-block: hidden;
 }
 
 // containers

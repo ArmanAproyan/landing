@@ -2,7 +2,6 @@
   padding: 60px 55px 50px 50px;
   border-radius: $border_radius_main;
   grid-area: technologies;
-  min-height: 291px;
 
   &--primary {
     background-color: $color_secondContainer;
@@ -25,6 +24,10 @@
   &__wrapper {
     @extend %flex-column;
     gap: 35px;
+
+    @include max-breakpoint(laptop) {
+      gap: 0;
+    }
 
     &__title {
       font-weight: $weight-bold;
@@ -62,6 +65,7 @@
       line-height: 30px;
 
       &--primary {
+        @extend %word_breaking;
         color: $color_white;
       }
 

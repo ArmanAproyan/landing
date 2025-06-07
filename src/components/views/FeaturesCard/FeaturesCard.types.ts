@@ -1,7 +1,7 @@
 import { SVGProps } from 'react'
 
 export type TUserList = {
-  id: string
+  id: number
   User: React.ComponentType<SVGProps<SVGSVGElement>>
 }
 

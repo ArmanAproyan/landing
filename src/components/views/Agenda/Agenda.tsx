@@ -2,7 +2,7 @@ import { useClassNames } from '@/hooks'
 import { AGENDA_INFO } from './Agenda.const'
 import { AGENDA_DATA } from '@/constants'
 import { formatDateYearMonthDay, timeUtil } from '@/utils'
-import { CustomButton } from '@/components'
+import { CustomButton, Heading } from '@/components'
 
 import styles from './Agenda.module.scss'
 
@@ -35,13 +35,7 @@ export const Agenda = () => {
 
   return (
     <div className={cn()}>
-      <div className={cn('__header')}>
-        <h3 className={cn('__header__title')}>AGENDA</h3>
-        <p className={cn('__header__date')}>
-          {formattedDateRange} {' | '}
-          {place}
-        </p>
-      </div>
+      <Heading title={'Agenda'} description={formattedDateRange + ' | ' + place} />
       <div className={cn('__container')}>
         <div className={cn('__container__information')}>{drawAgenta}</div>
         <div className={cn('__container__footer')}>

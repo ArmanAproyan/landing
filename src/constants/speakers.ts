@@ -1,5 +1,5 @@
 import { User1Icon, User2Icon, User3Icon, User4Icon } from '@/assets/icons'
-import { TUserList } from '../views/FeaturesCard/FeaturesCard.types'
+import { TUserList } from '../components/views/FeaturesCard/FeaturesCard.types'
 
 export const USERS_LIST: TUserList[] = [
   { id: 1, User: User1Icon },
