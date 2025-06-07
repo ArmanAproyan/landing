@@ -1,0 +1,168 @@
+.feature__cards {
+  @extend %container_main;
+  @extend %word_breaking;
+
+  background-color: $color_black;
+  grid-template-columns: 43% 54%;
+  gap: 20px;
+  display: grid;
+  grid-template-areas:
+    'speakers technologies'
+    'speakers networking';
+  box-sizing: border-box;
+
+  @include max-breakpoint(desktop) {
+    gap: 15px;
+    padding: 30px 40px;
+    grid-template-columns: 41% 53%;
+  }
+
+  @include max-breakpoint(tablet) {
+    gap: 20px;
+    padding: 20px;
+    grid-template-areas:
+      'speakers'
+      'technologies'
+      'networking';
+    grid-template-columns: 1fr;
+  }
+
+  @include max-breakpoint(mobile) {
+    gap: 16px;
+    padding: 16px;
+  }
+
+  &__speakers {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  &__speakers {
+    @extend %flex-column;
+    @extend %flex-between;
+
+    color: $color_white;
+    font-weight: $weight-bold;
+    border-radius: $border_radius_main;
+    background: $color_secondContainer;
+
+    font-size: 40px;
+    padding: 60px 50px;
+    grid-area: speakers;
+
+    @include max-breakpoint(desktop) {
+      padding: 30px 20px;
+    }
+
+    @include max-breakpoint(mobile) {
+      padding: 20px;
+    }
+
+    &__header {
+      @extend %flex-between;
+      @extend %flex-center;
+
+      min-height: 48px;
+
+      @include max-breakpoint(laptop) {
+        justify-content: center;
+      }
+
+      &__title {
+        font-weight: $weight-bold;
+
+        font-size: 40px;
+
+        @include max-breakpoint(laptop) {
+          font-size: 28px;
+          text-align: center;
+        }
+
+        @include max-breakpoint(mobile) {
+          font-size: 20px;
+        }
+      }
+    }
+
+    &__icon {
+      width: 74px;
+      height: 74px;
+
+      @include max-breakpoint(mobile) {
+        transform: scale(0.9);
+        font-size: 20px;
+      }
+    }
+
+    &__description {
+      gap: 53px;
+      display: flex;
+      padding-top: 45px;
+
+      @include max-breakpoint(desktop) {
+        gap: 30px;
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      &__title {
+        font-weight: $weight-standart;
+
+        width: 100%;
+        font-size: 20px;
+        line-height: 30px;
+
+        @include max-breakpoint(desktop) {
+          font-size: 16px;
+          line-height: 20px;
+        }
+      }
+    }
+
+    &__footer {
+      @extend %flex-center;
+      @extend %flex-between;
+
+      gap: 32px;
+      padding-top: 170px;
+      align-items: center;
+
+      @include max-breakpoint(desktop) {
+        gap: 20px;
+        padding-top: 10px;
+        flex-direction: column;
+      }
+    }
+
+    &__footer__avatars {
+      display: flex;
+
+      &__item {
+        width: 74px;
+        height: 74px;
+        overflow: hidden;
+        border-radius: 50%;
+
+        &:not(:first-child) {
+          margin-left: -40px;
+        }
+
+        @include max-breakpoint(desktop) {
+          transform: scale(0.6);
+        }
+
+        &__svg {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  &__technologia {
+    white-space: pre-line;
+  }
+}

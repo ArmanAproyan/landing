@@ -1,0 +1,31 @@
+.companies {
+  @extend %container_main;
+  @extend %flex-center;
+
+  gap: 127px;
+  height: auto;
+  flex-wrap: wrap;
+  padding-top: 100px;
+  padding-bottom: 120px;
+
+  @include max-breakpoint(laptop) {
+    gap: 90px;
+    padding: 80px 0;
+  }
+
+  @include max-breakpoint(tablet) {
+    gap: 60px;
+    padding: 60px 20px;
+  }
+
+  @include max-breakpoint(mobile) {
+    gap: 40px;
+    padding: 40px 10px;
+  }
+
+  &__item {
+    @include max-breakpoint(tablet) {
+      transform: scale(0.9);
+    }
+  }
+}

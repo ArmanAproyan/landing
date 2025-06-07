@@ -1,0 +1,47 @@
+.heading {
+  @extend %flex-center;
+  @extend %flex-between;
+  width: 100%;
+  margin-top: 150px;
+
+  @include max-breakpoint(tablet) {
+    gap: 25px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__title {
+    font-weight: $weight-bold;
+
+    font-size: 100px;
+    text-transform: uppercase;
+
+    @include max-breakpoint(laptop) {
+      font-size: 60px;
+    }
+
+    @include max-breakpoint(mobile) {
+      font-size: 40px;
+      text-align: center;
+    }
+  }
+
+  &__date {
+    font-weight: $weight-standart;
+
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 295px;
+    min-height: 60px;
+
+    @include max-breakpoint(laptop) {
+      text-align: center;
+    }
+
+    @include max-breakpoint(mobile) {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+}
