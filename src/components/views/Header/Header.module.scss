@@ -1,0 +1,40 @@
+.header {
+  @extend %flex-center;
+  @extend %flex-between;
+  @extend %container_main;
+  @extend %word_breaking;
+  background-color: $color_background;
+
+  gap: 90px;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  @include max-breakpoint(desktop) {
+    padding: 40px 50px;
+  }
+
+  @include max-breakpoint(laptop) {
+    gap: 25px;
+    width: 100%;
+  }
+
+  &__logo {
+    @extend %flex-center;
+
+    font-weight: $weight_medium;
+
+    height: 60px;
+    font-size: 25px;
+    cursor: pointer;
+    max-width: 164px;
+
+    @include max-breakpoint(mobile) {
+      transform: scale(1);
+    }
+
+    &__item {
+      width: 164px;
+      height: 60px;
+    }
+  }
+}

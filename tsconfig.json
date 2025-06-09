@@ -9,8 +9,7 @@
     "esModuleInterop": true,
     "baseUrl": "./src",
     "paths": {
-      "@/*": ["./*"],
-      "containers/*": ["/containers*"]
+      "@/*": ["./*"]
     },
     "types": ["react", "react-dom"]
   },

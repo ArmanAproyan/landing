@@ -1,0 +1,90 @@
+.card {
+  padding: 60px 55px 50px 50px;
+  border-radius: $border_radius_main;
+  grid-area: technologies;
+
+  &--primary {
+    background-color: $color_secondContainer;
+    grid-area: technologies;
+  }
+
+  &--secondary {
+    background-color: $color_light-gray;
+    grid-area: networking;
+  }
+
+  @include max-breakpoint(desktop) {
+    padding: 30px 20px;
+  }
+
+  @include max-breakpoint(mobile) {
+    padding: 20px;
+  }
+
+  &__wrapper {
+    @extend %flex-column;
+    gap: 35px;
+
+    @include max-breakpoint(laptop) {
+      gap: 0;
+    }
+
+    &__title {
+      font-weight: $weight-bold;
+
+      font-size: 40px;
+      white-space: nowrap;
+      max-width: 100%;
+      white-space: pre-wrap;
+
+      &--primary {
+        color: $color_white;
+      }
+
+      &--secondary {
+        color: $color_black;
+      }
+
+      @include max-breakpoint(laptop) {
+        white-space: normal;
+      }
+
+      @include max-breakpoint(desktop) {
+        font-size: 28px;
+        text-align: center;
+        margin-bottom: 35px;
+      }
+
+      @include max-breakpoint(mobile) {
+        font-size: 18px;
+      }
+    }
+
+    &__description {
+      font-size: 20px;
+      line-height: 30px;
+
+      &--primary {
+        @extend %word_breaking;
+        color: $color_white;
+      }
+
+      &--secondary {
+        color: $color_black;
+      }
+
+      @include max-breakpoint(desktop) {
+        text-align: center;
+      }
+
+      @include max-breakpoint(laptop) {
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      @include max-breakpoint(mobile) {
+        font-size: 14px;
+      }
+    }
+  }
+}

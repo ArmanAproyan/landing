@@ -1,0 +1,5 @@
+export { ReactComponent as Favicon } from './favicon.svg'
+export { ReactComponent as Logo } from './logo.svg'
+export { ReactComponent as ArrowTopRightIcon } from './ArrowTopRightIcon.svg'
+export { ReactComponent as ArrowIcon } from './arrow.svg'
+export { ReactComponent as Uidecore_2Icon } from './uiDecore_2.svg'

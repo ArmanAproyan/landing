@@ -1,0 +1,156 @@
+.agenda {
+  @extend %container_main;
+
+  &__container {
+    @extend %flex-column;
+    background-color: $color_mainContainer;
+    border-radius: $border_radius_main;
+    margin-top: 90px;
+
+    &__information {
+      @extend %flex-column;
+      gap: 150px;
+      padding: 150px 90px 0px 90px;
+
+      @include max-breakpoint(desktop) {
+        padding: 50px 0px 0px 40px;
+      }
+
+      @include max-breakpoint(laptop) {
+        gap: 70px;
+      }
+
+      @include max-breakpoint(mobile) {
+        padding: 20px;
+        gap: 50px;
+      }
+
+      &__block {
+        @extend %flex-between;
+
+        @include max-breakpoint(laptop) {
+          gap: 20px;
+          text-align: center;
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+        }
+      }
+
+      &__dayAndTime {
+        @extend %flex-column;
+        gap: 15px;
+
+        @include max-breakpoint(tablet) {
+          justify-content: center;
+          align-items: center;
+        }
+
+        @include max-breakpoint(mobile) {
+          padding-top: 20px;
+        }
+
+        &__day,
+        &__time {
+          font-weight: $weight-bold;
+
+          font-size: 40px;
+
+          @include max-breakpoint(desktop) {
+            font-size: 25px;
+          }
+
+          @include max-breakpoint(tablet) {
+            line-height: 20px;
+            font-size: 20px;
+          }
+        }
+      }
+
+      &__titleAndDescription {
+        @extend %flex-column;
+        gap: 30px;
+        max-width: 600px;
+        padding-right: 20px;
+
+        @include max-breakpoint(laptop) {
+          transform: scale(0.9);
+        }
+
+        @include max-breakpoint(tablet) {
+          transform: scale(0.8);
+        }
+
+        @include max-breakpoint(mobile) {
+          padding: 0;
+          transform: scale(1);
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+        }
+
+        &__title {
+          font-weight: $weight-bold;
+
+          font-size: 40px;
+
+          @include max-breakpoint(desktop) {
+            font-size: 25px;
+          }
+
+          @include max-breakpoint(mobile) {
+            font-size: 20px;
+          }
+        }
+
+        &__description {
+          font-weight: $weight-standart;
+
+          font-size: 20px;
+          line-height: 30px;
+
+          @include max-breakpoint(desktop) {
+            font-size: 15px;
+          }
+
+          @include max-breakpoint(mobile) {
+            font-size: 14px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+
+    &__footer {
+      @extend %flex-center;
+      position: relative;
+      padding: 80px 100px 140px 0;
+      justify-content: end;
+      background-position: 0% 60%;
+      background-repeat: no-repeat;
+      background-image: url('../../../assets/icons/shared/uiDecore_2.svg');
+
+      @include max-breakpoint(tablet) {
+        padding: 40px 20px 100px 20px;
+        align-items: center;
+        background-size: 100px;
+        justify-content: center;
+        background-position: center bottom;
+      }
+
+      &__button {
+        @extend %flex-center;
+
+        &__item {
+          padding-left: 143px;
+          padding-right: 143px;
+
+          @include max-breakpoint(mobile) {
+            padding: 20px 40px;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

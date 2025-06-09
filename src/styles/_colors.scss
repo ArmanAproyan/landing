@@ -1,11 +1,13 @@
 // === Background colors ===
 $color_background: #000000;
 $color_mainContainer: #1c1a1a;
+$color_secondContainer: rgba(1, 71, 255, 1);
 $color_blur: rgba(0, 0, 0, 0.4);
 
 // === Text and base colors ===
 $color_white: #ffffff;
 $color_black: rgb(0, 0, 0);
+$color_light-gray: rgba(222, 222, 224, 1);
 
 // === UI elements ===
 $button_color: linear-gradient(84.77deg, #0147ff 1.59%, rgba(1, 71, 255, 0) 121.45%);
