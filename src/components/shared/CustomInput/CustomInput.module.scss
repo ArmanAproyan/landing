@@ -1,0 +1,19 @@
+.input {
+  position: relative;
+  &__item {
+    border: none;
+    border-bottom: 1px solid $color_input;
+    outline: none;
+    color: $color_black;
+    padding-bottom: 10px;
+    font-size: 30px;
+    &::placeholder {
+      color: $color_input;
+    }
+  }
+
+  &__errorMessage {
+    color: $color_error;
+    font-size: 12px;
+  }
+}
