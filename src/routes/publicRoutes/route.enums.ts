@@ -1,9 +1,11 @@
 export enum PublicRouteNames {
   HOME = 'Home',
-  NOTFOUND = 'Not Found'
+  NOTFOUND = 'Not Found',
+  TEST = 'Test'
 }
 
 export enum ROUTE {
   'HOME' = '/',
-  'NOTFOUND' = '*'
+  'NOTFOUND' = '*',
+  'TEST' = '/test'
 }

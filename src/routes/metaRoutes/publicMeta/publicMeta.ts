@@ -8,5 +8,9 @@ export const PUBLIC_META = {
   [ROUTE.NOTFOUND]: {
     title: 'Not Found',
     description: 'This page is Not Found'
+  },
+  [ROUTE.TEST]: {
+    title: 'Test',
+    description: 'This page for testing'
   }
 }

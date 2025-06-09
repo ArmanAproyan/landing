@@ -1,7 +1,7 @@
 import { PublicLayout } from '@/layouts'
 import { PUBLIC_META } from '../metaRoutes'
 import { PublicRouteNames, ROUTE } from './route.enums'
-import { Home, NotFound } from '@/containers'
+import { Home, NotFound, Test } from '@/containers'
 
 export const PUBLIC_ROUTES = [
   {
@@ -21,6 +21,16 @@ export const PUBLIC_ROUTES = [
     component: (
       <PublicLayout {...PUBLIC_META[ROUTE.NOTFOUND]} hasHeaderFooter={false}>
         <NotFound />
+      </PublicLayout>
+    )
+  },
+  {
+    id: 3,
+    name: PublicRouteNames.TEST,
+    path: ROUTE.TEST,
+    component: (
+      <PublicLayout {...PUBLIC_META[ROUTE.TEST]} hasHeaderFooter={false}>
+        <Test />
       </PublicLayout>
     )
   }
