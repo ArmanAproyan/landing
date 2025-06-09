@@ -1,6 +1,7 @@
 .heading {
   @extend %flex-center;
   @extend %flex-between;
+  @extend %word_breaking;
   width: 100%;
   margin-top: 150px;
 
@@ -9,6 +10,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-top: 100px;
   }
 
   &__title {
