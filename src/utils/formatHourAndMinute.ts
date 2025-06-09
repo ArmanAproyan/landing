@@ -1,6 +1,6 @@
 import dayjs from 'dayjs'
 
-export const timeUtil = (from: string, to: string) => {
+export const formatHourAndMinute = (from: string, to: string) => {
   const fromTime = dayjs(from)
   const toTime = dayjs(to)
 
