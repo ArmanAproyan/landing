@@ -72,8 +72,8 @@
     background: $color_white;
 
     padding: 10px;
-    position: static;
+    display: flex;
     border-radius: 0;
-    display: flex !important;
+    position: static;
   }
 }

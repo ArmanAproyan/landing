@@ -1,7 +1,7 @@
 import { TCustomLinkIcon } from '@/components/shared/CustomLinks/CustomLink.types'
 import { FacebookIcon, InstagramIcon, LinkedinIcon, YouTubeIcon } from '@/assets/icons'
 
-enum LinksEnum {
+export enum LinksEnum {
   Facebook = 'Facebook',
   Instagram = 'Instagram',
   Linkedin = 'Linkedin',

@@ -1,8 +1,9 @@
 import { SVGProps } from 'react'
+import { LinksEnum } from '@/constants/LinksData'
 
 export type TCustomLinkIcon = {
   id: number
-  name: string
+  name: LinksEnum
   Icon: React.FC<SVGProps<SVGSVGElement>>
   href: string
 }
