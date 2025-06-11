@@ -24,6 +24,11 @@
     }
   }
 
+  &--small {
+    padding: 10px;
+    background: $button_color;
+  }
+
   &__icon {
     width: 17px;
     height: 17px;

@@ -1,3 +1,4 @@
 export * from './formatDateYearMonthDay'
-export * from './timeUtil'
+export * from './formatHourAndMinute'
 export * from './addBrAfterSentences'
+export * from './startTimerDiff'

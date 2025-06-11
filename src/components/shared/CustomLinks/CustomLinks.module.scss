@@ -1,0 +1,16 @@
+.links {
+  @extend %flex-center;
+
+  gap: 20px;
+
+  &__item {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+
+    &:hover {
+      scale: 1.1;
+    }
+  }
+}

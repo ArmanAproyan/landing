@@ -1,5 +1,6 @@
 import { useClassNames } from '@/hooks'
 import { THeadingProps } from './Heading.types'
+
 import styles from './Heading.module.scss'
 
 export const Heading = ({ title, description }: THeadingProps) => {

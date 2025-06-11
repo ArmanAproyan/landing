@@ -1,0 +1,47 @@
+.custom-input {
+  position: relative;
+  @extend %flex-column;
+  gap: 8px;
+
+  &__input {
+    color: $color_black;
+
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    line-height: 30px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $color_input;
+
+    &::placeholder {
+      color: $color_input;
+    }
+  }
+
+  &__warning {
+    border-color: $color_warning;
+  }
+
+  &__error {
+    border-color: $color_error;
+  }
+
+  &__isRequired {
+    color: $color_error;
+    top: 0;
+    right: 0;
+    position: absolute;
+  }
+
+  &__errorMessage,
+  &__worningMessage {
+    color: $color_error;
+    font-size: 12px;
+  }
+
+  &__worningMessage {
+    color: $color_warning;
+  }
+}

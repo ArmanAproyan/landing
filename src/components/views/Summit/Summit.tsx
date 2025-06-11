@@ -20,7 +20,6 @@ export const Summit = ({ summitData }: SummitProps) => {
       </div>
       <div className={cn('__welcome__text')}>
         <h1 className={cn('__welcome__text__title')}>{title}</h1>
-        {/* <p className={cn('__welcome__text__description')}>{text}</p> */}
         <p className={cn('__welcome__text__description')}>
           {lines.map((line, index) => (
             <Fragment key={index}>
