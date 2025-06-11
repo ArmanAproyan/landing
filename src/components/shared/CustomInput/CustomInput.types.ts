@@ -5,6 +5,12 @@ export type TCustomInput = {
   className?: string
   isRequired?: boolean
   value?: string
-  error?: string
+  errorMessage?: string
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
+  onFocus?: (e: React.FocusEvent<HTMLInputElement>) => void
+  worningMessage?: string
+  isError?: boolean
+  isWarning?: boolean
+  isSelectAll?: boolean
+  onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void
 }

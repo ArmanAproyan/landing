@@ -5,5 +5,5 @@ export type TCustomButtonProps = {
   IconComponent?: React.FC<React.SVGProps<SVGSVGElement>> | null
   showIcon?: boolean
   className?: string
-  variant?: 'primary' | 'secondary'
+  variant?: 'primary' | 'secondary' | 'test'
 }

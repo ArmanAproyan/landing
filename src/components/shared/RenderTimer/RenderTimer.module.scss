@@ -1,0 +1,16 @@
+.timer {
+  @extend %flex-column;
+  @extend %flex-center;
+
+  &__seconds {
+    gap: 27px;
+    font-size: 200px;
+  }
+
+  &__days {
+    @extend %flex-center;
+    gap: 190px;
+    font-size: 16px;
+    line-height: 30px;
+  }
+}

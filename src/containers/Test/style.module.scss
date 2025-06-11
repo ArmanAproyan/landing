@@ -1,0 +1,43 @@
+.test {
+  @extend %container_main;
+  @extend %flex-column;
+  @extend %flex-center;
+  &__form {
+    padding: 50px;
+    width: 500px;
+    height: 500px;
+    background-color: $color_white;
+    border-radius: 20px;
+    margin: 50px;
+  }
+
+  &__timer {
+    @extend %flex-column;
+    @extend %flex-center;
+    width: 800px;
+
+    &__seconds {
+      gap: 27px;
+      font-size: 200px;
+    }
+    &__days {
+      @extend %flex-center;
+      gap: 190px;
+      font-size: 16px;
+      line-height: 30px;
+    }
+  }
+
+  &__navbar_items {
+    background-color: $color_white;
+    width: 500px;
+    height: 500px;
+  }
+
+  &__buttons {
+    @extend %flex-column;
+    gap: 25px;
+    border: 1px solid;
+    padding: 20px;
+  }
+}
