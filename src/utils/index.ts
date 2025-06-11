@@ -1,5 +1,4 @@
 export * from './formatDateYearMonthDay'
 export * from './formatHourAndMinute'
 export * from './addBrAfterSentences'
-export * from './validateFiled'
 export * from './startTimerDiff'

@@ -12,14 +12,15 @@ export const CustomInput = ({
   onBlur,
   onFocus,
   onChange,
+  className,
   placeholder,
   errorMessage,
   worningMessage,
+  wrapperClassName,
   isError = false,
   isWarning = false,
   isRequired = false,
-  isSelectAll = false,
-  className: classNameProp
+  isSelectAll = false
 }: TCustomInput) => {
   const { cn } = useClassNames('custom-input', styles)
 
@@ -31,14 +32,14 @@ export const CustomInput = ({
   }
 
   return (
-    <div className={cn()}>
+    <div className={(cn(), wrapperClassName)}>
       <input
         type={type}
         className={classNames(
           cn('__input'),
           { [cn('__error')]: isError },
           { [cn('__warning')]: isWarning },
-          classNameProp
+          className
         )}
         name={name}
         value={value}

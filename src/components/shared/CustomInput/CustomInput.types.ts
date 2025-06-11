@@ -1,16 +1,17 @@
 export type TCustomInput = {
   type: string
-  placeholder: string
   name?: string
-  className?: string
-  isRequired?: boolean
   value?: string
-  errorMessage?: string
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
-  onFocus?: (e: React.FocusEvent<HTMLInputElement>) => void
-  worningMessage?: string
   isError?: boolean
+  className?: string
+  placeholder: string
   isWarning?: boolean
+  isRequired?: boolean
+  errorMessage?: string
   isSelectAll?: boolean
+  worningMessage?: string
+  wrapperClassName?: string
   onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void
+  onFocus?: (e: React.FocusEvent<HTMLInputElement>) => void
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
 }

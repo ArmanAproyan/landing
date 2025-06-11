@@ -1,8 +1,9 @@
-import { useClassNames, useTimer } from '@/hooks'
-import { CustomButton, CustomInput, CustomLinks, NavBarItems, RenderTimer } from '@/components'
 import { useState } from 'react'
+import { useClassNames, useTimer } from '@/hooks'
 import { LinksData } from '@/constants/LinksData'
 import { NavBarItems as items } from '@/components/shared/NavBar/Navbar.const'
+import { CustomButton, CustomInput, CustomLinks, NavBarItems, RenderTimer } from '@/components'
+
 import styles from './style.module.scss'
 
 export const Test = () => {
@@ -84,16 +85,16 @@ export const Test = () => {
           isSelectAll={isSelectAll}
         />
         <div className={cn('__buttons')}>
-          <CustomButton variant="test" onClick={handleToggleError}>
+          <CustomButton variant="small" onClick={handleToggleError}>
             Toggle error
           </CustomButton>
-          <CustomButton variant="test" onClick={handleToggleWarning}>
+          <CustomButton variant="small" onClick={handleToggleWarning}>
             Toggle warning
           </CustomButton>
-          <CustomButton variant="test" onClick={handleToggleRequired}>
+          <CustomButton variant="small" onClick={handleToggleRequired}>
             Toggle required
           </CustomButton>
-          <CustomButton variant="test" onClick={handleToggleSelectAll}>
+          <CustomButton variant="small" onClick={handleToggleSelectAll}>
             Toggle isSelectAll
           </CustomButton>
         </div>
