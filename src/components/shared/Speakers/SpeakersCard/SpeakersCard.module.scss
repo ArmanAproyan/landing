@@ -1,0 +1,24 @@
+.speakers-card {
+  gap: 20px;
+  display: flex;
+  margin-right: 20px;
+  margin-bottom: 20px;
+
+  @include max-breakpoint(desktop) {
+    justify-content: center;
+  }
+
+  @include max-breakpoint(mobile) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__reversed {
+    flex-direction: row-reverse;
+
+    @include max-breakpoint(mobile) {
+      flex-direction: column;
+    }
+  }
+}
