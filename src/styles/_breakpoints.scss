@@ -1,7 +1,7 @@
 $mobile: 576px;
 $tablet: 800px;
 $laptop: 992px;
-$desktop: 1240px;
+$desktop: 1340px;
 
 @function breakpoint($size) {
   @if $size == mobile {

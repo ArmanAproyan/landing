@@ -44,7 +44,7 @@ export const Test = () => {
     setIsSelectAll(!isSelectAll)
   }
 
-  const timer = useTimer('2025-06-11T10:30:00Z')
+  const timer = useTimer('2025-06-12T10:30:00Z')
 
   console.log('timer', timer)
 
@@ -71,18 +71,18 @@ export const Test = () => {
     <div className={cn()}>
       <div className={cn('__form')}>
         <CustomInput
-          className={cn('__input')}
           type="text"
-          placeholder="Name"
           name="testInput"
+          placeholder="Name"
+          className={cn('__input')}
           isError={isError}
           value={inputValue}
           isWarning={isWarning}
           isRequired={isRequired}
           onChange={handleChange}
+          isSelectAll={isSelectAll}
           errorMessage={errorMessage}
           worningMessage={warningMessage}
-          isSelectAll={isSelectAll}
         />
         <div className={cn('__buttons')}>
           <CustomButton variant="small" onClick={handleToggleError}>

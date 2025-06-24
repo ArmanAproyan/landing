@@ -2,6 +2,7 @@ import { Summit, Companies, FeatureCards } from '@/components'
 import { useClassNames } from '@/hooks'
 import { Agenda } from '@/components'
 import { SUMMITS } from '@/components/views/Summit/Summit.const'
+import { KeynoteSpeakers } from '@/components'
 
 import styles from './Home.module.scss'
 
@@ -16,6 +17,7 @@ export const Home = () => {
       <Companies />
       <FeatureCards />
       <Agenda />
+      <KeynoteSpeakers />
     </div>
   )
 }

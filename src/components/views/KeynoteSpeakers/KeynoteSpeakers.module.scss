@@ -1,0 +1,20 @@
+.speakers {
+  @extend %container_main;
+
+  &__items {
+    margin-top: 110px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-width: 100%;
+    height: auto;
+
+    @include max-breakpoint(desktop) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__button {
+    margin-top: 40px;
+    padding: 22px 50px 22px 50px;
+  }
+}
