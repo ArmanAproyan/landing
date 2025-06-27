@@ -1,4 +1,4 @@
-import { useClassNames } from '@/hooks'
+import { useClassNames, useTooltipPosition } from '@/hooks'
 import React, { useState, useRef } from 'react'
 import { TSpeakersDescriptionProp } from './SpeakersDescription.types'
 
@@ -7,19 +7,10 @@ import styles from './SpeakersDescription.module.scss'
 export const SpeakersDescription = ({ name, profession }: TSpeakersDescriptionProp) => {
   const { cn } = useClassNames('description', styles)
   const [tooltipVisible, setTooltipVisible] = useState(false)
-  const [tooltipPos, setTooltipPos] = useState({ x: 0, y: 0 })
 
   const containerRef = useRef<HTMLDivElement>(null)
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (containerRef.current) {
-      const rect = containerRef.current.getBoundingClientRect()
-      setTooltipPos({
-        x: e.clientX - rect.left,
-        y: e.clientY - rect.top
-      })
-    }
-  }
+  const [handleMouseMove, position] = useTooltipPosition(containerRef)
+  const { x, y } = position
 
   return (
     <div className={cn()} ref={containerRef}>
@@ -36,7 +27,7 @@ export const SpeakersDescription = ({ name, profession }: TSpeakersDescriptionPr
       </div>
 
       {tooltipVisible && (
-        <div className={cn('__tooltip')} style={{ top: tooltipPos.y - 40, left: tooltipPos.x }}>
+        <div className={cn('__tooltip')} style={{ top: y - 40, left: x }}>
           {profession}
         </div>
       )}
