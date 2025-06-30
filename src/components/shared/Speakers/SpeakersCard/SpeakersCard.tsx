@@ -1,11 +1,11 @@
 import classNames from 'classnames'
 import { useClassNames } from '@/hooks'
-import { SpeakersDescription, SpeakersImages } from 'components'
+import { SpeakersDescription, SpeakersImage } from 'components'
 import { TSpeakersCardProp } from './SpeakersCard.type'
 
 import styles from './SpeakersCard.module.scss'
 
-export const SpeakersCard = ({ name, profession, img, isReversed }: TSpeakersCardProp) => {
+export const SpeakersCard = ({ name, profession, imgUrl, isReversed, alt }: TSpeakersCardProp) => {
   const { cn } = useClassNames('speakers-card', styles)
 
   return (
@@ -15,7 +15,7 @@ export const SpeakersCard = ({ name, profession, img, isReversed }: TSpeakersCar
       })}
     >
       <SpeakersDescription name={name} profession={profession} />
-      <SpeakersImages img={img} />
+      <SpeakersImage imgUrl={imgUrl} alt={alt} />
     </div>
   )
 }

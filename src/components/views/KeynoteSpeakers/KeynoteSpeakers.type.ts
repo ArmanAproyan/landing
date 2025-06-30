@@ -4,4 +4,5 @@ export type TKeynoteSpeakersDataType = {
   profession: string
   img: string
   isReversed: boolean
+  alt: string
 }

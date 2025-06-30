@@ -23,13 +23,14 @@ export const KeynoteSpeakers = () => {
         description="Meet the industry leaders shaping the future of AI."
       />
       <div className={cn('__items')}>
-        {visibleSpeakers.map(({ id, name, profession, img, isReversed }) => (
+        {visibleSpeakers.map(({ id, name, profession, img, isReversed, alt }) => (
           <SpeakersCard
             key={id}
             name={name}
             profession={profession}
-            img={img}
+            imgUrl={img}
             isReversed={isReversed}
+            alt={alt}
           />
         ))}
       </div>

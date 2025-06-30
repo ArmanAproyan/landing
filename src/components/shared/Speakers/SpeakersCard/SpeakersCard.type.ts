@@ -1,6 +1,7 @@
 export type TSpeakersCardProp = {
   name: string
   profession: string
-  img: string
+  imgUrl: string
   isReversed: boolean
+  alt: string
 }
