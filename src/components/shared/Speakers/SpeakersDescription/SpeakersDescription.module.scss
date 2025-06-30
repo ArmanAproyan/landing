@@ -15,9 +15,10 @@
   }
 
   @include max-breakpoint(mobile) {
-    padding: 20px;
-    padding: 10px;
-    border-radius: 20px;
+    padding: 111px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &__wrapper {
@@ -51,6 +52,10 @@
         font-size: 20px;
         max-width: 100%;
       }
+
+      @include max-breakpoint(mobile) {
+        max-width: 100px;
+      }
     }
 
     &__profession {
@@ -78,12 +83,12 @@
       @include max-breakpoint(tablet) {
         max-width: 100%;
         font-size: 12px;
-        max-width: 100px;
         line-height: 24px;
       }
 
       @include max-breakpoint(mobile) {
         min-height: none;
+        max-width: 100px;
       }
     }
   }
