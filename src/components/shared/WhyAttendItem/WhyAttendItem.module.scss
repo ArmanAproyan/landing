@@ -3,89 +3,93 @@
     border-radius: $border_radius_main;
     background-color: $color_mainContainer;
     @extend %flex-column;
-    gap: 53px;
-    max-height: 289px;
+    gap: 40px;
+    padding: 40px 60px;
     overflow: hidden;
 
     @include max-breakpoint(tablet-s) {
-      gap: 23px;
-      max-height: 180px;
+      gap: 20px;
+      padding: 30px 20px;
     }
 
     &__title_block {
       width: 100%;
-      height: 50px;
-      padding: 40px 0 53px 60px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
 
       @include max-breakpoint(desktop) {
-        padding: 20px 0 0 60px;
-        display: flex;
         justify-content: center;
-        align-items: center;
       }
 
       &__title {
-        font-size: 20px;
-        line-height: 30px;
+        font-size: 24px;
         font-weight: 700;
+        line-height: 1.3;
 
-        @include max-breakpoint(tablet-s) {
-          font-size: 15px;
+        @include max-breakpoint(tablet) {
+          font-size: 18px;
+        }
+
+        @include max-breakpoint(mobile) {
+          font-size: 16px;
+        }
+      }
+
+      &.reversedTitle {
+        justify-content: flex-end;
+
+        @include max-breakpoint(desktop) {
+          justify-content: center;
         }
       }
     }
 
     &__description_block {
       display: flex;
-      padding: 0 10px 0 10px;
-      @include max-breakpoint(desktop) {
-        justify-content: center;
-        align-content: center;
-        gap: 120px;
-      }
+      gap: 80px;
+      justify-content: center;
+      align-items: center;
 
       @include max-breakpoint(tablet) {
-        gap: 50px;
-      }
-
-      @include max-breakpoint(tablet-s) {
-        gap: 15px;
+        gap: 40px;
+        flex-wrap: wrap;
       }
 
       @include max-breakpoint(mobile) {
-        gap: 5px;
+        gap: 20px;
+      }
+
+      &.reversedDescription {
+        flex-direction: row-reverse;
       }
 
       &__description {
-        height: 120px;
+        max-width: 240px;
         font-size: 18px;
-        max-width: 220px;
         font-weight: 400;
-        line-height: 30px;
+        line-height: 1.6;
 
-        @include max-breakpoint(tablet-s) {
-          font-size: 12px;
+        @include max-breakpoint(tablet) {
+          font-size: 14px;
+          max-width: 200px;
         }
+
         @include max-breakpoint(mobile) {
-          font-size: 10px;
-          max-width: 150px;
-          line-height: 20px;
-          margin-bottom: 40px;
+          font-size: 12px;
+          max-width: 160px;
         }
       }
     }
 
-    .reversedDescription {
-      display: flex;
-      flex-direction: row-reverse;
-    }
-
     &__numbers {
+      font-size: 280px;
+      line-height: 1;
       transform: translateY(-30%);
-      font-size: 300px;
-      padding-right: 20px;
+      padding-right: 10px;
 
       @include max-breakpoint(desktop) {
+        font-size: 220px;
         transform: translateY(-40%);
       }
 
@@ -95,7 +99,7 @@
 
       @include max-breakpoint(mobile) {
         font-size: 100px;
-        padding-top: 30px;
+        padding-top: 20px;
       }
 
       &__number {
@@ -103,7 +107,6 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
-
         color: transparent;
       }
     }

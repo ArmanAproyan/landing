@@ -1,19 +1,19 @@
 // === Background colors ===
 $color_background: #000000;
 $color_mainContainer: #1c1a1a;
-$color_secondContainer: rgba(1, 71, 255, 1);
+$color_secondContainer: #0147ff;
 $color_blur: rgba(0, 0, 0, 0.4);
+$color_gray: gray;
 
 // === Text and base colors ===
 $color_white: #ffffff;
-$color_black: rgb(0, 0, 0);
-$color_light-gray: rgba(222, 222, 224, 1);
+$color_black: #000000;
+$color_light-gray: #dedee0;
 
 // === UI elements ===
 $button_color: linear-gradient(84.77deg, #0147ff 1.59%, rgba(1, 71, 255, 0) 121.45%);
 
-//input color
-
-$color_input: rgba(126, 126, 126, 1);
-$color_error: rgb(234, 22, 22);
-$color_warning: rgb(255, 153, 0);
+// input color
+$color_input: #7e7e7e;
+$color_error: #ea1616;
+$color_warning: #ff9900;

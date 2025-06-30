@@ -1,12 +1,11 @@
-import { useEffect } from 'react'
-import { useResize } from '@/hooks'
 import classNames from 'classnames'
 import { useClassNames } from '@/hooks'
-import { useCroppedText } from '@/hooks'
 import { breakpoints } from '@/constants'
 import { whyAttendItemProp } from './WhyAttendItem.types'
 
 import styles from './WhyAttendItem.module.scss'
+import { useResize } from '@/hooks/resize'
+import { useCroppedText } from '@/hooks/croppedText'
 
 export const WhyAttendItem = ({ title, description, number, index }: whyAttendItemProp) => {
   const { cn } = useClassNames('why_attend_item', styles)
@@ -17,14 +16,14 @@ export const WhyAttendItem = ({ title, description, number, index }: whyAttendIt
   const isTablet = innerWidth <= breakpoints.desktop
   const isReversed = Math.floor(index / (isTablet ? 1 : 2)) % 2 === 1
 
-  useEffect(() => {
-    console.log(croppedDescription)
-  }, [croppedDescription])
-
   return (
     <div className={cn()}>
       <div className={cn('__item')}>
-        <div className={cn('__item__title_block')}>
+        <div
+          className={classNames(cn('__item__title_block'), {
+            [styles.reversedTitle]: isReversed
+          })}
+        >
           <div className={cn('__item__title_block__title')}>{croppedTitle}</div>
         </div>
         <div

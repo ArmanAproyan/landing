@@ -1,14 +1,14 @@
-import React, { RefObject, useState } from 'react'
+import { useRef, useState } from 'react'
 
-export type ITooltip = {
+type TooltipPosition = {
   x: number
   y: number
 }
 
-export const useTooltipPosition = <T extends HTMLElement>(
-  containerRef: RefObject<T>
-): [(e: React.MouseEvent) => void, ITooltip] => {
-  const [tooltipPos, setTooltipPos] = useState<ITooltip>({ x: 0, y: 0 })
+export const useTooltipPosition = <T extends HTMLElement = HTMLDivElement>() => {
+  const containerRef = useRef<T | null>(null)
+  const [isTooltipVisible, setIsTooltipVisible] = useState(false)
+  const [tooltipPos, setTooltipPos] = useState<TooltipPosition>({ x: 0, y: 0 })
 
   const handleMouseMove = (e: React.MouseEvent) => {
     if (containerRef.current) {
@@ -19,6 +19,15 @@ export const useTooltipPosition = <T extends HTMLElement>(
       })
     }
   }
+  const handleMouseEnter = () => setIsTooltipVisible(true)
+  const handleMouseLeave = () => setIsTooltipVisible(false)
 
-  return [handleMouseMove, tooltipPos]
+  return {
+    tooltipPos,
+    containerRef,
+    handleMouseMove,
+    handleMouseEnter,
+    handleMouseLeave,
+    isTooltipVisible
+  }
 }
