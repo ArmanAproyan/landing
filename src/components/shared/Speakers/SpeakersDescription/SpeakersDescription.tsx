@@ -1,7 +1,5 @@
-import { useState } from 'react'
-import { breakpoints } from '@/constants'
 import { TextWrapper, Tooltip } from '@/components'
-import { useClassNames, useWindowResize } from '@/hooks'
+import { useClassNames, useIsLaptop } from '@/hooks'
 import { useTooltipPosition } from '@/hooks/tooltipPosition'
 import { TSpeakersDescriptionProp } from './SpeakersDescription.types'
 
@@ -9,17 +7,8 @@ import styles from './SpeakersDescription.module.scss'
 
 export const SpeakersDescription = ({ name, profession }: TSpeakersDescriptionProp) => {
   const { cn } = useClassNames('description', styles)
-  const [textLines, setTextLines] = useState<number>(1)
 
-  const handleChangeTextLines = () => {
-    if (window.innerWidth <= breakpoints.laptop) {
-      setTextLines(2)
-    } else {
-      setTextLines(1)
-    }
-  }
-
-  useWindowResize(handleChangeTextLines)
+  const isLaptop = useIsLaptop()
 
   const {
     tooltipPos,
@@ -41,7 +30,7 @@ export const SpeakersDescription = ({ name, profession }: TSpeakersDescriptionPr
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
           onMouseMove={handleMouseMove}
-          lines={textLines}
+          lines={isLaptop ? 2 : 1}
         >
           {profession}
         </TextWrapper>
