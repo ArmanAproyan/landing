@@ -65,10 +65,9 @@
       font-size: 20px;
       cursor: default;
       min-height: 60px;
-      max-width: 215px;
       overflow: hidden;
       line-height: 30px;
-      white-space: nowrap;
+      width: 215px;
       @extend %word_breaking;
       text-overflow: ellipsis;
 
@@ -78,17 +77,19 @@
 
       @include max-breakpoint(desktop) {
         max-width: 150px;
+        line-height: 20px;
+        font-size: 18px;
       }
 
       @include max-breakpoint(tablet) {
-        max-width: 100%;
-        font-size: 12px;
-        line-height: 24px;
+        max-width: 120px;
+        font-size: 16px;
       }
 
       @include max-breakpoint(mobile) {
         min-height: none;
         max-width: 100px;
+        font-size: 13px;
       }
     }
   }
