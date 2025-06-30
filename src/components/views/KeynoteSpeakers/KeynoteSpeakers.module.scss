@@ -2,14 +2,22 @@
   @extend %container_main;
 
   &__items {
-    margin-top: 110px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    min-width: 100%;
     height: auto;
+    display: grid;
+    min-width: 100%;
+    margin-top: 110px;
+    grid-template-columns: repeat(2, 1fr);
 
-    @include max-breakpoint(desktop) {
-      grid-template-columns: 1fr;
+    @include max-breakpoint(laptop) {
+      gap: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: center;
+    }
+
+    @include max-breakpoint(mobile) {
+      flex-direction: column;
     }
   }
 

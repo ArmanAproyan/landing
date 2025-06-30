@@ -1,66 +1,90 @@
 .description {
-  position: relative; // чтобы тултип позиционировать относительно контейнера
-
   background-color: $color_light-gray;
   border-radius: $border_radius_main;
+
+  position: relative;
   box-sizing: border-box;
-  padding: 50px 40px 40px 40px;
+  padding: 50px 40px 40px;
 
   @include max-breakpoint(desktop) {
-    padding: 50px 40px 40px 40px;
+    padding: 30px 24px 24px;
+  }
+
+  @include max-breakpoint(tablet) {
+    padding: 24px;
   }
 
   @include max-breakpoint(mobile) {
     padding: 20px;
-    text-align: center;
+    padding: 10px;
+    border-radius: 20px;
   }
 
   &__wrapper {
     @extend %flex-column;
-    justify-content: space-between;
+
     height: 100%;
+    justify-content: space-between;
+
+    @include max-breakpoint(mobile) {
+      display: flex;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
 
     &__name {
       @extend %word_breaking;
       color: $color_black;
       font-weight: $weight-semibold;
+
       font-size: 30px;
       min-width: 215px;
 
+      @include max-breakpoint(desktop) {
+        width: 100px;
+        min-width: 150px;
+        max-width: 180px;
+        font-size: 20px;
+      }
       @include max-breakpoint(tablet) {
         font-size: 20px;
+        max-width: 100%;
       }
     }
 
     &__profession {
-      @extend %word_breaking;
       color: $color_black;
       font-weight: $weight-standart;
+
       font-size: 20px;
-      line-height: 30px;
+      cursor: default;
       min-height: 60px;
       max-width: 215px;
-
-      white-space: nowrap;
       overflow: hidden;
+      line-height: 30px;
+      white-space: nowrap;
+      @extend %word_breaking;
       text-overflow: ellipsis;
-      cursor: default;
-    }
-  }
 
-  &__tooltip {
-    position: absolute;
-    background-color: $color_black;
-    color: white;
-    padding: 8px 12px;
-    border-radius: 6px;
-    max-width: 250px;
-    white-space: normal;
-    font-size: 14px;
-    pointer-events: none;
-    user-select: none;
-    z-index: 1000;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-    transform: translateX(-50%);
+      @include max-breakpoint(laptop) {
+        max-width: 180px;
+      }
+
+      @include max-breakpoint(desktop) {
+        max-width: 150px;
+      }
+
+      @include max-breakpoint(tablet) {
+        max-width: 100%;
+        font-size: 12px;
+        max-width: 100px;
+        line-height: 24px;
+      }
+
+      @include max-breakpoint(mobile) {
+        min-height: none;
+      }
+    }
   }
 }

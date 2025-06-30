@@ -1,25 +1,23 @@
+import { Tooltip } from '@/components'
 import { useClassNames } from '@/hooks'
-import React, { useState, useRef } from 'react'
+import { useTooltipPosition } from '@/hooks/tooltipPosition'
 import { TSpeakersDescriptionProp } from './SpeakersDescription.types'
 
 import styles from './SpeakersDescription.module.scss'
 
 export const SpeakersDescription = ({ name, profession }: TSpeakersDescriptionProp) => {
   const { cn } = useClassNames('description', styles)
-  const [tooltipVisible, setTooltipVisible] = useState(false)
-  const [tooltipPos, setTooltipPos] = useState({ x: 0, y: 0 })
 
-  const containerRef = useRef<HTMLDivElement>(null)
+  const {
+    containerRef,
+    tooltipPos,
+    handleMouseMove,
+    handleMouseEnter,
+    handleMouseLeave,
+    isTooltipVisible
+  } = useTooltipPosition()
 
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (containerRef.current) {
-      const rect = containerRef.current.getBoundingClientRect()
-      setTooltipPos({
-        x: e.clientX - rect.left,
-        y: e.clientY - rect.top
-      })
-    }
-  }
+  const { x, y } = tooltipPos
 
   return (
     <div className={cn()} ref={containerRef}>
@@ -27,19 +25,15 @@ export const SpeakersDescription = ({ name, profession }: TSpeakersDescriptionPr
         <p className={cn('__wrapper__name')}>{name}</p>
         <p
           className={cn('__wrapper__profession')}
-          onMouseEnter={() => setTooltipVisible(true)}
-          onMouseLeave={() => setTooltipVisible(false)}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
           onMouseMove={handleMouseMove}
         >
           {profession}
         </p>
       </div>
 
-      {tooltipVisible && (
-        <div className={cn('__tooltip')} style={{ top: tooltipPos.y - 40, left: tooltipPos.x }}>
-          {profession}
-        </div>
-      )}
+      {isTooltipVisible && <Tooltip x={x} y={y} text={profession} />}
     </div>
   )
 }

@@ -1,0 +1,16 @@
+.tooltip {
+  background-color: $color_black;
+  color: $color_white;
+
+  z-index: 1000;
+  font-size: 14px;
+  max-width: 250px;
+  padding: 8px 12px;
+  user-select: none;
+  border-radius: 6px;
+  position: absolute;
+  white-space: normal;
+  pointer-events: none;
+  transform: translateX(-50%);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
