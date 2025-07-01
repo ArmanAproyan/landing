@@ -1,4 +1,6 @@
 .why_attend_item {
+  position: relative;
+
   &__item {
     border-radius: $border_radius_main;
     background-color: $color_mainContainer;
@@ -7,7 +9,6 @@
     gap: 53px;
     overflow: hidden;
     max-height: 289px;
-    position: relative;
 
     @include max-breakpoint(tablet-s) {
       gap: 23px;
@@ -34,7 +35,7 @@
     font-size: 20px;
     font-weight: 700;
     line-height: 30px;
-
+    @extend %word_breaking;
     @include max-breakpoint(tablet-s) {
       font-size: 15px;
     }
@@ -98,6 +99,7 @@
 
     @include max-breakpoint(tablet) {
       font-size: 100px;
+      transform: translateY(-40%);
     }
 
     @include max-breakpoint(mobile) {
@@ -114,13 +116,17 @@
     -webkit-text-fill-color: transparent;
   }
 
-  &.reversed_title {
+  &reversed_title {
     align-items: center;
     justify-content: flex-end;
     padding: 40px 60px 53px 60px;
   }
 
-  &.reversed_description {
+  &reversed_description {
     flex-direction: row-reverse;
+    @include max-breakpoint(desktop) {
+      font-size: 150px;
+      transform: translateY(-30%);
+    }
   }
 }

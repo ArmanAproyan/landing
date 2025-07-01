@@ -1,18 +1,18 @@
 import classNames from 'classnames'
 import { Tooltip } from '@/components'
 import { TextWrapper } from '../TextWrapper'
-import styles from './WhyAttendItem.module.scss'
-import { useCroppedText } from '@/hooks/croppedText'
 import { useClassNames, useIsLaptop } from '@/hooks'
 import { whyAttendItemProp } from './WhyAttendItem.types'
+import { MAX_LINE, MIN_LINE, TITLE_LINE } from './WhyAttendItem.const'
 import { useTooltipPosition } from '@/hooks/tooltipPosition'
+
+import styles from './WhyAttendItem.module.scss'
 
 export const WhyAttendItem = ({ title, description, number, index }: whyAttendItemProp) => {
   const { cn } = useClassNames('why_attend_item', styles)
-  const croppedDescription = useCroppedText(description, 100)
-  const croppedTitle = useCroppedText(title, 30)
   const isTablet = useIsLaptop()
   const isReversed = Math.floor(index / (isTablet ? 1 : 2)) % 2 === 1
+  const TabletLines = isTablet ? MIN_LINE : MAX_LINE
 
   const {
     tooltipPos,
@@ -33,7 +33,9 @@ export const WhyAttendItem = ({ title, description, number, index }: whyAttendIt
             [cn('reversed_title')]: isReversed
           })}
         >
-          <div className={cn('__title')}>{croppedTitle}</div>
+          <div className={cn('__title')}>
+            <TextWrapper lines={TITLE_LINE}>{title}</TextWrapper>
+          </div>
         </div>
         <div
           className={classNames(cn('__description_block'), {
@@ -48,9 +50,9 @@ export const WhyAttendItem = ({ title, description, number, index }: whyAttendIt
               onMouseMove={handleMouseMove}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
-              lines={4}
+              lines={TabletLines}
             >
-              {croppedDescription}
+              {description}
             </TextWrapper>
             {isTooltipVisible && <Tooltip x={x} y={y} text={description} />}
           </div>
