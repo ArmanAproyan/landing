@@ -1,9 +1,8 @@
 import { useClassNames } from '@/hooks'
 import { WHY_ATTEND_DATA } from './WhyAttend.const'
-import { Heading } from '@/components/shared'
+import { Heading, WhyAttendItem } from '@/components/shared'
 
 import styles from './WhyAttend.module.scss'
-import { WhyAttendItem } from '@/components/shared/WhyAttendItem'
 
 export const WhyAttend = () => {
   const { cn } = useClassNames('why_attend', styles)
@@ -18,10 +17,10 @@ export const WhyAttend = () => {
           return (
             <WhyAttendItem
               key={id}
-              title={title}
-              description={description}
-              number={number}
               index={index}
+              title={title}
+              number={number}
+              description={description}
             />
           )
         })}
