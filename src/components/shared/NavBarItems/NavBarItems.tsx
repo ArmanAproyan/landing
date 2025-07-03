@@ -1,4 +1,3 @@
-import classNames from 'classnames'
 import { useClassNames } from '@/hooks'
 import { TNavBarItemsProps } from './NavBarItems.types'
 
@@ -12,24 +11,17 @@ export const NavBarItems = ({
   variant = 'default'
 }: TNavBarItemsProps) => {
   const { cn } = useClassNames('list', styles)
+
   return (
-    <ul
-      ref={listRef}
-      className={classNames(
-        cn(),
-        { [cn('--open')]: isOpen },
-        { [cn(`--${variant}`)]: variant && variant !== 'default' }
-      )}
-    >
+    <ul ref={listRef} className={cn('', { open: isOpen, [variant]: variant !== 'default' })}>
       {navItems.map(({ id, title, isActive }) => (
         <li
           key={id}
           onClick={() => handleClick(id)}
-          className={classNames(
-            cn('__item'),
-            { [cn('__item__active')]: isActive && variant === 'default' },
-            { [cn(`__item--${variant}`)]: variant && variant !== 'default' }
-          )}
+          className={cn('__item', {
+            active: isActive && variant === 'default',
+            [variant]: variant !== 'default'
+          })}
         >
           {title}
         </li>

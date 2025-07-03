@@ -1,5 +1,4 @@
 import { FocusEvent } from 'react'
-import classNames from 'classnames'
 import { useClassNames } from '@/hooks'
 import { TCustomInput } from './CustomInput.types'
 
@@ -35,12 +34,7 @@ export const CustomInput = ({
     <div className={(cn(), wrapperClassName)}>
       <input
         type={type}
-        className={classNames(
-          cn('__input'),
-          { [cn('__error')]: isError },
-          { [cn('__warning')]: isWarning },
-          className
-        )}
+        className={(cn('__input'), { error: isError }, { warning: isWarning }, className)}
         name={name}
         value={value}
         onChange={onChange}

@@ -35,7 +35,9 @@
     font-size: 20px;
     font-weight: 700;
     line-height: 30px;
+
     @extend %word_breaking;
+
     @include max-breakpoint(tablet-s) {
       font-size: 15px;
     }
@@ -116,14 +118,15 @@
     -webkit-text-fill-color: transparent;
   }
 
-  &reversed_title {
+  &__title_block--reversed_title {
     align-items: center;
     justify-content: flex-end;
     padding: 40px 60px 53px 60px;
   }
 
-  &reversed_description {
+  &__description_block--reversed_description {
     flex-direction: row-reverse;
+
     @include max-breakpoint(desktop) {
       font-size: 150px;
       transform: translateY(-30%);

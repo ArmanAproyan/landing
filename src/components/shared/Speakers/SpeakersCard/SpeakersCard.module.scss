@@ -14,7 +14,7 @@
     justify-content: center;
   }
 
-  &__reversed {
+  &--reversed {
     flex-direction: row-reverse;
 
     @include max-breakpoint(mobile) {

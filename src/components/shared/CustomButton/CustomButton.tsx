@@ -1,4 +1,3 @@
-import classNames from 'classnames'
 import { useClassNames } from '@/hooks'
 import { ArrowTopRightIcon } from '@/assets/icons/shared'
 import { TCustomButtonProps } from './CustomButton.type'
@@ -20,7 +19,7 @@ export const CustomButton = ({
     <button
       disabled={isDisabled}
       onClick={isDisabled ? undefined : onClick}
-      className={classNames(cn(), cn(`--${variant}`), classNameProp)}
+      className={[cn('', { [variant]: true }), classNameProp].filter(Boolean).join(' ')}
     >
       {children}
       {IconComponent && showIcon && <IconComponent className={cn('__icon')} />}

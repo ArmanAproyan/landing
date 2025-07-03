@@ -1,7 +1,6 @@
 import { useClassNames } from '@/hooks'
 import { TCardForFeatureProps } from './CardForFeature.types'
 
-import classNames from 'classnames'
 import styles from './CardForFeature.module.scss'
 
 export const CardForFeature = ({
@@ -11,20 +10,14 @@ export const CardForFeature = ({
   className: classNameProp
 }: TCardForFeatureProps) => {
   const { cn } = useClassNames('card', styles)
+
+  const rootClassName = [cn('', { [variant]: true }), classNameProp].filter(Boolean).join(' ')
+
   return (
-    <div className={classNames(cn(), cn(`--${variant}`), classNameProp)}>
-      <div className={classNames(cn('__wrapper'), cn(`__wrapper--${variant}`))}>
-        <h3 className={classNames(cn('__wrapper__title'), cn(`__wrapper__title--${variant}`))}>
-          {title}
-        </h3>
-        <p
-          className={classNames(
-            cn('__wrapper__description'),
-            cn(`__wrapper__description--${variant}`)
-          )}
-        >
-          {description}
-        </p>
+    <div className={rootClassName}>
+      <div className={cn('__wrapper', { [variant]: true })}>
+        <h3 className={cn('__wrapper__title', { [variant]: true })}>{title}</h3>
+        <p className={cn('__wrapper__description', { [variant]: true })}>{description}</p>
       </div>
     </div>
   )
