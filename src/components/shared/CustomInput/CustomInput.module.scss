@@ -20,11 +20,11 @@
     }
   }
 
-  &__warning {
+  &--warning {
     border-color: $color_warning;
   }
 
-  &__error {
+  &--error {
     border-color: $color_error;
   }
 

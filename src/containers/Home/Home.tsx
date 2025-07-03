@@ -1,4 +1,4 @@
-import { Summit, Companies, FeatureCards } from '@/components'
+import { Summit, Companies, FeatureCards, WhyAttend } from '@/components'
 import { useClassNames } from '@/hooks'
 import { Agenda } from '@/components'
 import { SUMMITS } from '@/components/views/Summit/Summit.const'
@@ -18,6 +18,7 @@ export const Home = () => {
       <FeatureCards />
       <Agenda />
       <KeynoteSpeakers />
+      <WhyAttend />
     </div>
   )
 }

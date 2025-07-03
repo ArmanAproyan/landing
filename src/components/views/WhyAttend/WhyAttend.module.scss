@@ -1,0 +1,26 @@
+.why_attend {
+  &__items {
+    gap: 20px;
+    width: 100%;
+    display: grid;
+    padding-top: 110px;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include max-breakpoint(desktop) {
+      gap: 16px;
+      padding-top: 80px;
+    }
+
+    @include max-breakpoint(tablet) {
+      grid-template-columns: 1fr;
+
+      gap: 12px;
+      padding-top: 50px;
+    }
+
+    @include max-breakpoint(mobile) {
+      gap: 8px;
+      padding: 30px 12px 0;
+    }
+  }
+}

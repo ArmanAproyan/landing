@@ -1,4 +1,5 @@
 $mobile: 576px;
+$tablet-s: 650px;
 $tablet: 800px;
 $laptop: 992px;
 $desktop: 1340px;
@@ -8,6 +9,8 @@ $desktop: 1340px;
     @return $mobile;
   } @else if $size == tablet {
     @return $tablet;
+  } @else if $size == tablet-s {
+    @return $tablet-s;
   } @else if $size == laptop {
     @return $laptop;
   } @else if $size == desktop {

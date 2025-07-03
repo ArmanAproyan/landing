@@ -1,4 +1,4 @@
-import classNames from 'classnames'
+// import classNames from 'classnames'
 import { useClassNames } from '@/hooks'
 import { SpeakersDescription, SpeakersImage } from 'components'
 import { TSpeakersCardProp } from './SpeakersCard.type'
@@ -10,8 +10,8 @@ export const SpeakersCard = ({ name, profession, imgUrl, isReversed, alt }: TSpe
 
   return (
     <div
-      className={classNames(cn(), {
-        [cn('__reversed')]: isReversed
+      className={cn('', {
+        reversed: isReversed
       })}
     >
       <SpeakersDescription name={name} profession={profession} />
